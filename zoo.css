@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: #525240;
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+.header {
+    display: flex; 
+    justify-content: space-evenly; 
+    background-color: #8A897C;
+    padding: 0;
+}
+
+.header__page-title {
+    color: #353535;
+    font-size: 3rem;
+    margin: 0;
+
+}
+
+.header img {
+    width: 60px;
+    height: auto;
+    border-radius: 30%;
+    padding: 0;
+}
+  
