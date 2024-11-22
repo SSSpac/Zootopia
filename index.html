@@ -4,42 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="zoo.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./styles/nav.css">
+    <link rel="stylesheet" href="./styles/reset.css">
 
 </head>
 <body>
-    <footer>
-        <div class="container">
-           <div class="footer-content"></div>
-           <ul class="info">
-           <h3>Contact us</h3>
-           
-           <p>Email:info@cmeducations.se</p>
-           <p>Hammarby Fabriksväg 61
-            <p> 120 30 Stockholm </p>
-           <p> +46(0)8 33 60 15</p>
-           
-        </ul>
-           <div class="footer-content"></div>
-           <ul class="list">
-            <li><a href="Home.index">Home</a></li>
-            <li><a href="reptiles.html">Reptiles</a></li>
-            <li><a href="Mammals.html">Mammals</a></li>
-            <li><a href="Bird.html">Birds</a></li>
-           </ul>
-           <div class="footer-content">
-            <h3>Follows us</h3>
-            <ul class="social-icons">
-            <li><a href="https://cmeducations.se/"><i class="fab fa-facebook"></i></a></li>
-            <li><a href="https://www.youtube.com/watch?v=JxS5E-kZc2s"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://www.instagram.com/futuregamesedu/"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="https://github.com/SSSpac/Australia-zoo-7"><i class="fab fa-linkedin"></i></a></li>
-           </ul>
-           </div>
+
+    <nav class="nav">
+        <div class="nav-logo">
+            <a href="#">
+                <img src="#" alt="logo"> 
+            </a>
         </div>
-    <div class="bottom-bar"></div>
-    <p>&copy;2024 Changemaker Educations</p>
-    </footer>
+            
+        <ul class="menu">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Mammals</a></li>
+            <li><a href="#">Reptiles</a></li>
+            <li><a href="#">Birds</a></li>
+        </ul>
+        <a class="btn" href="#question">About us</a>
+        
+        <span class="nav__bar">
+            <nav>
+                <ul class="top__menu">
+                    <li>
+                        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                            <label for="menu-toggle" class="menu-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </label>
+                        <ul class="sub__menu">
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+        
+                            <li>
+                                <a href="#">Mammals</a>
+                            </li>
+        
+                            <li>
+                                <a href="#">Reptiles</a>
+                            </li>
+        
+                            <li>
+                                <a href="#">Birds</a>
+                            </li>
+
+                            <li>
+                                <a href="#">About us</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </span>
+
+
+    </nav>
+
 </body>
 </html>
