@@ -1,45 +1,101 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="zoo.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Australia zoo</title>
+  <link rel="stylesheet" href="./styles/zoo.css">
+  <script src="./scripts/zoo.js" defer></script>
 </head>
 <body>
-    <footer>
-        <div class="container">
-           <div class="footer-content"></div>
-           <ul class="info">
-           <h3>Contact us</h3>
-           
-           <p>Email:info@cmeducations.se</p>
-           <p>Hammarby Fabriksväg 61
-            <p> 120 30 Stockholm </p>
-           <p> +46(0)8 33 60 15</p>
-           
+    <header class="header">
+        <h1 class="page-title">Zootopia</h1>
+    </header>
+    <div class="content">
+  <nav id="sidebar">
+    <ul>
+      <li>
+        <button onclick=toggleSidebar() id="toggle-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m313-480 155 156q11 11 11.5 27.5T468-268q-11 11-28 11t-28-11L228-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T468-692q11 11 11 28t-11 28L313-480Zm264 0 155 156q11 11 11.5 27.5T732-268q-11 11-28 11t-28-11L492-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T732-692q11 11 11 28t-11 28L577-480Z"/></svg>
+        </button>
+      </li>
+      
+      <li class="active">
+        <a href="index.html">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M240-200h120v-200q0-17 11.5-28.5T400-440h160q17 0 28.5 11.5T600-400v200h120v-360L480-740 240-560v360Zm-80 0v-360q0-19 8.5-36t23.5-28l240-180q21-16 48-16t48 16l240 180q15 11 23.5 28t8.5 36v360q0 33-23.5 56.5T720-120H560q-17 0-28.5-11.5T520-160v-200h-80v200q0 17-11.5 28.5T400-120H240q-33 0-56.5-23.5T160-200Zm320-270Z"/></svg>
+          <span>Home</span>
+        </a>
+      </li>
+
+      <li>
+        <button onclick=toggleSubMenu(this) class="dropdown-btn">
+          <span>Birds</span>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z"/></svg>
+        </button>
+        <ul class="sub-menu">
+          <div>
+            <li><a href="#">Parrot</a></li>
+            <li><a href="#">Eagle</a></li>
+            <li><a href="#">Ostrich</a></li>
+          </div>
         </ul>
-           <div class="footer-content"></div>
-           <ul class="list">
-            <li><a href="Home.index">Home</a></li>
-            <li><a href="reptiles.html">Reptiles</a></li>
-            <li><a href="Mammals.html">Mammals</a></li>
-            <li><a href="Bird.html">Birds</a></li>
-           </ul>
-           <div class="footer-content">
-            <h3>Follows us</h3>
-            <ul class="social-icons">
-            <li><a href="https://cmeducations.se/"><i class="fab fa-facebook"></i></a></li>
-            <li><a href="https://www.youtube.com/watch?v=JxS5E-kZc2s"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://www.instagram.com/futuregamesedu/"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="https://github.com/SSSpac/Australia-zoo-7"><i class="fab fa-linkedin"></i></a></li>
-           </ul>
-           </div>
-        </div>
-    <div class="bottom-bar"></div>
-    <p>&copy;2024 Changemaker Educations</p>
-    </footer>
+      </li>
+
+      <li>
+        <button onclick=toggleSubMenu(this) class="dropdown-btn">
+          
+          <span>Mammals</span>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z"/></svg>
+        </button>
+
+        <ul class="sub-menu">
+          <div>
+            <li><a href="#">Dolphines</a></li>
+            <li><a href="#">Dogs</a></li>
+            <li><a href="#">Cats</a></li>
+            <li><a href="#">Whales</a></li>
+          </div>
+        </ul>
+      </li>
+
+      <li>
+        <button onclick=toggleSubMenu(this) class="dropdown-btn">
+          
+          <span>Reptiles</span>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z"/></svg>
+        </button>
+        <ul class="sub-menu">
+          <div>
+            <li><a href="#">Crocodiles</a></li>
+            <li><a href="#">Lizards</a></li>
+            <li><a href="#">Snakes</a></li>
+            <li><a href="#">Dinasaurs</a></li>
+          </div>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M520-640v-160q0-17 11.5-28.5T560-840h240q17 0 28.5 11.5T840-800v160q0 17-11.5 28.5T800-600H560q-17 0-28.5-11.5T520-640ZM120-480v-320q0-17 11.5-28.5T160-840h240q17 0 28.5 11.5T440-800v320q0 17-11.5 28.5T400-440H160q-17 0-28.5-11.5T120-480Zm400 320v-320q0-17 11.5-28.5T560-520h240q17 0 28.5 11.5T840-480v320q0 17-11.5 28.5T800-120H560q-17 0-28.5-11.5T520-160Zm-400 0v-160q0-17 11.5-28.5T160-360h240q17 0 28.5 11.5T440-320v160q0 17-11.5 28.5T400-120H160q-17 0-28.5-11.5T120-160Zm80-360h160v-240H200v240Zm400 320h160v-240H600v240Zm0-480h160v-80H600v80ZM200-200h160v-80H200v80Zm160-320Zm240-160Zm0 240ZM360-280Z"/></svg>
+          <span>About Us</span>
+        </a>
+      </li>
+      
+    </ul>
+    <footer>&copy; 2024 Zootopia</footer>
+  </nav>
+  <main>
+
+    <div class="container">
+      <h2>Sweden</h2>
+      <p>Sweden,formally the Kingdom of Sweden, is a Nordic country located on the Scandinavian Peninsula in Northern Europe. It borders Norway to the west and north, and Finland to the east. At 450,295 square kilometres (173,860 sq mi), Sweden is the largest Nordic country and the fifth-largest country in Europe. The capital and largest city is Stockholm. Sweden has a population of 10.6 million, and a low population density of 25.5 inhabitants per square kilometre (66/sq mi); 88% of Swedes reside in urban areas.[11] They are mostly in the central and southern half of the country. Sweden's urban areas together cover 1.5% of its land area. Sweden has a diverse climate owing to the length of the country, which ranges from 55°N to 69°N.
+
+        Sweden has been inhabited since prehistoric times, c.12,000 BC. The inhabitants emerged as the Geats (Swedish: Götar) and Swedes (Svear), which together constituted the sea-faring peoples known as the Norsemen. A unified Swedish state was established during the late 10th century. In 1397, Sweden joined Norway and Denmark to form the Scandinavian Kalmar Union,[12] which Sweden left in 1523. When Sweden became involved in the Thirty Years' War on the Protestant side, an expansion of its territories began, forming the Swedish Empire, which remained one of the great powers of Europe until the early 18th century. During this era Sweden controlled much of the Baltic Sea. Most of the conquered territories outside the Scandinavian Peninsula were lost during the 18th and 19th centuries. The eastern half of Sweden, present-day Finland, was lost to Imperial Russia in 1809. The last war in which Sweden was directly involved was in 1814, when Sweden by military means forced Norway into a personal union, a union which lasted until 1905.
+        
+        Sweden is a highly developed country ranked fifth in the Human Development Index. It is a constitutional monarchy and a parliamentary democracy, with legislative power vested in the 349-member unicameral Riksdag. It is a unitary state, divided into 21 counties and 290 municipalities. Sweden maintains a Nordic social welfare system that provides universal health care and tertiary education for its citizens. It has the world's 14th highest GDP per capita and ranks very highly in quality of life, health, education, protection of civil liberties, economic competitiveness, income equality, gender equality and prosperity. Sweden joined the European Union on 1 January 1995 and NATO on 7 March 2024. It is also a member of the United Nations, the Schengen Area, the Council of Europe, the Nordic Council, the World Trade Organization and the Organisation for Economic Co-operation and Development (OECD).</p>
+    </div>
+  </main>
+    </div>
+
 </body>
 </html>
