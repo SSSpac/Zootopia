@@ -5,6 +5,10 @@ footer {
     width: 100%;
 }
 
+footer p {
+    color: white;
+}
+
 .container {
     width: auto;
     margin: auto;
