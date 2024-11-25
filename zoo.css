@@ -13,23 +13,28 @@ body {
 }
 
 .header {
-    display: flex; 
-    justify-content: space-evenly; 
+    position: absolute;
+    display: inline-block;
     background-color: #8A897C;
     padding: 0;
+    width: 100%;
 }
 
 .header__page-title {
+    display: flex; 
+    justify-content: space-evenly;
     color: #353535;
-    font-size: 3rem;
+    font-size: 3.3rem;
     margin: 0;
 
 }
 
 .header img {
+    position: absolute;
     width: 60px;
     height: auto;
     border-radius: 30%;
     padding: 0;
+    
 }
   
