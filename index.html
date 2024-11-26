@@ -7,11 +7,67 @@
   <title>Australia zoo</title>
   <link rel="stylesheet" href="./styles/zoo.css">
   <link rel="stylesheet" href="./styles/layout.css">
+  <link rel="stylesheet" href="./styles/nav.css">
+  <link rel="stylesheet" href="./styles/reset.css">
+  
   <script src="./scripts/zoo.js" defer></script>
 </head>
 <body>
     <header class="header">
-        <h1 class="page-title">Zootopia</h1>
+        <nav class="nav">
+          <div class="nav-logo">
+              <a href="#">
+                  <img src="#" alt="logo"> 
+              </a>
+          </div>
+          <h1 class="page-title">Zootopia</h1>
+              
+          <ul class="menu">
+              <li><a href="#" class="active">Home</a></li>
+              <li><a href="#">Mammals</a></li>
+              <li><a href="#">Reptiles</a></li>
+              <li><a href="#">Birds</a></li>
+          </ul>
+          <a class="btn" href="#question">About us</a>
+          
+          <span class="nav__bar">
+              <nav>
+                  <ul class="top__menu">
+                      <li>
+                          <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                              <label for="menu-toggle" class="menu-icon">
+                                  <span></span>
+                                  <span></span>
+                                  <span></span>
+                              </label>
+                          <ul class="sub__menu">
+                              <li>
+                                  <a href="#">Home</a>
+                              </li>
+          
+                              <li>
+                                  <a href="#">Mammals</a>
+                              </li>
+          
+                              <li>
+                                  <a href="#">Reptiles</a>
+                              </li>
+          
+                              <li>
+                                  <a href="#">Birds</a>
+                              </li>
+  
+                              <li>
+                                  <a href="#">About us</a>
+                              </li>
+                          </ul>
+                      </li>
+                  </ul>
+              </nav>
+          </span>
+  
+  
+      </nav>
     </header>
     <div class="content">
   <nav id="sidebar">
@@ -62,10 +118,7 @@
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto reiciendis dolore dolorem voluptatibus iusto quam quas similique, doloremque ratione repudiandae consequatur inventore sed, perferendis ipsum! Iure dolorem eius delectus magnam?</p>
         <a href="#">Let's Go</a>
       </div>
-
- 
   </main>
-
 
 </body>
 </html>
