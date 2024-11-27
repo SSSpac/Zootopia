@@ -1,6 +1,6 @@
 //alert("welcome")
 const toggleButton = document.getElementById('toggle-btn')
-//const toggleButton = document.querySelector('#toggle-btn').addEventListener
+//const toggleButton = document.querySelector('#toggle-btn').addEventListener 
 const sidebar = document.getElementById('sidebar')
 
 function toggleSidebar(){
