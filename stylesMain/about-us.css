@@ -1,12 +1,47 @@
+.main-content {
+    padding: 24px;
+}
+
+.team-content {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.team {
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.team img {
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+
+.team-content:hover > :not(:hover) {
+    filter: blur(3px);
+    opacity: 0.8;
+}
+
+
 .teamsDescription {
     display: none;
 }
 
+.team-description h2 {
+    font-size: 1.8rem;
+}
+
 .featured-description {
-    display: block;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    background-color: rgb(0, 0, 0);
+    padding: 24px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
 }
 
 
 .picture {
-    width: 300px;
+    width: 250px;
 }

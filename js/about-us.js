@@ -48,7 +48,7 @@ mikaelImg.setAttribute("data-name", "mikael");
 mikael.append(mikaelImg);
 
 const img2 = document.createElement("img");
-img2.src = "./images/about-us/yevhenii.jpg";
+img2.src = "./images/about-us/mikael.jpg";
 mikaelImg.append(img2);
 
 let mikaelText = document.createElement("div");
@@ -79,7 +79,7 @@ saifelislamImg.setAttribute("data-name", "saifelislam");
 saifelislam.append(saifelislamImg);
 
 const img3 = document.createElement("img");
-img3.src = "./images/about-us/yevhenii.jpg";
+img3.src = "./images/about-us/saif.jpg";
 saifelislamImg.append(img3);
 
 let saifelislamText = document.createElement("div");
@@ -111,7 +111,7 @@ andrewImg.setAttribute("data-name", "andrew");
 andrew.append(andrewImg);
 
 const img4 = document.createElement("img");
-img4.src = "./images/about-us/yevhenii.jpg";
+img4.src = "./images/about-us/andrew.jpg";
 andrewImg.append(img4);
 
 let andrewText = document.createElement("div");
@@ -144,7 +144,7 @@ sabaImg.setAttribute("data-name", "saba");
 saba.append(sabaImg);
 
 const img5 = document.createElement("img");
-img5.src = "./images/about-us/yevhenii.jpg";
+img5.src = "./images/about-us/saba.jpg";
 sabaImg.append(img5);
 
 let sabaText = document.createElement("div");
@@ -188,8 +188,7 @@ teamTabs.forEach(picture =>
     picture.addEventListener("click", () => {
         const dataName = picture.getAttribute("data-name");
         const associatedDescription = teamPerson.find(
-            descriptionDiv => descriptionDiv.getAttribute("data-name") === dataName
-        );
+            descriptionDiv => descriptionDiv.getAttribute("data-name") === dataName);
 
 
         if (associatedDescription.classList.contains("featured-description")) {
