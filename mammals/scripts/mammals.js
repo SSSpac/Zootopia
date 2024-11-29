@@ -28,25 +28,25 @@ const getAllAnimals = () => {
   
   
   const showAnimal = (index) => {
-    const animalInfo = document.getElementById("content");
+    const animals = document.getElementById("content");
     let animal = getAnimal(index);
-    animalInfo.innerHTML = ` 
+    animals.innerHTML = ` 
+    <h2 class="animal_name">${animal.name}</h2> 
       <img src="${animal.image}" alt="${animal.name}" class="animal_imge"> 
-      <h2 class="animal_name">${animal.name}</h2> 
-      <p>${animal.description.substring(0, 200)}
-      <span class="dots">...</span>
-      <span class="more hidden">${animal.description.substring(200)}</span></p>
-      <button class="read-more">Read more</button> 
       <p><strong>Group:</strong> ${animal.group}</p>
       <p><strong>Lifespan:</strong> ${animal.lifespan}</p>
       <p><strong>Weight:</strong> ${animal.weight}</p>
       <p><strong>Found:</strong> ${animal.found}</p>
-      <p><strong>Food:</strong> ${animal.food}</p>`;
+      <p><strong>Food:</strong> ${animal.food}</p>
+      <p>${animal.description.substring(0, 200)}
+      <span class="dots">...</span>
+      <span class="more hidden">${animal.description.substring(200)}</span></p>
+      <button class="read-more">Read more</button> `;
     // Add an event listener to the "Read more" button
-    const readMoreButton = animalInfo.querySelector(".read-more");
+    const readMoreButton = animals.querySelector(".read-more");
     readMoreButton.addEventListener("click", function () {
-      const dots = animalInfo.querySelector(".dots");
-      const moreText = animalInfo.querySelector(".more");
+      const dots = animals.querySelector(".dots");
+      const moreText = animals.querySelector(".more");
   
       if (moreText.classList.contains("hidden")) {
         // Show the hidden text and update button text

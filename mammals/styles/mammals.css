@@ -257,14 +257,13 @@ body {
 
 }
 
-.header,
-.footer {
+.header, .footer {
     background-color: #527d6a;
     padding: 32px;
     text-align: center;
 }
 
-.header__page-title {
+.page-title {
    color: #1c4738;
    font-size: 4rem;
    margin: 0;
@@ -290,33 +289,11 @@ body {
   flex-grow: 1 0 auto;
   padding: 20px;
 }
-/* image css */
-.animal_imge {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
 
 .animal_name {
-    text-align: center;
+    color: bisque;
 }
 
-/* reptiles annimation */
-.group_name {
-    position: absolute;
-    top: 40%;
-    left: 12%;
-    transform: translateX(-50%);
-    font-size: 50px;
-    -webkit-text-stroke: 1px #fff;
-    color: transparent;
-    background-image: linear-gradient(#fff, #fff);
-    background-repeat: no-repeat;
-    -webkit-background-clip: text;
-    background-position: -750px 0;
-    animation: backcolor 6s linear infinite;
-}
 
 @keyframes backcolor {
     100%{
