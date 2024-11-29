@@ -19,7 +19,69 @@ let quokka = new Animals ("quokka", 50, 3, 10, "Plant eaters", "The Quokka, Seto
 let animals = [echidna, tasmanian_devil, quokka];
 
 
-const button = document.querySelector(".menu li:nth-child(2) a"); 
+const getAllAnimals = () => {
+    animals.forEach(e => {
+      const animal_info = document.querySelector(".animal_names");
+      animal_info.innerHTML = animal_info.innerHTML + `<li>${e.name}</li>`;
+    });
+  }
+  
+  
+  const showAnimal = (index) => {
+    const animalInfo = document.getElementById("content");
+    let animal = getAnimal(index);
+    animalInfo.innerHTML = ` 
+      <img src="${animal.image}" alt="${animal.name}" class="animal_imge"> 
+      <h2 class="animal_name">${animal.name}</h2> 
+      <p>${animal.description.substring(0, 200)}
+      <span class="dots">...</span>
+      <span class="more hidden">${animal.description.substring(200)}</span></p>
+      <button class="read-more">Read more</button> 
+      <p><strong>Group:</strong> ${animal.group}</p>
+      <p><strong>Lifespan:</strong> ${animal.lifespan}</p>
+      <p><strong>Weight:</strong> ${animal.weight}</p>
+      <p><strong>Found:</strong> ${animal.found}</p>
+      <p><strong>Food:</strong> ${animal.food}</p>`;
+    // Add an event listener to the "Read more" button
+    const readMoreButton = animalInfo.querySelector(".read-more");
+    readMoreButton.addEventListener("click", function () {
+      const dots = animalInfo.querySelector(".dots");
+      const moreText = animalInfo.querySelector(".more");
+  
+      if (moreText.classList.contains("hidden")) {
+        // Show the hidden text and update button text
+        moreText.classList.remove("hidden");
+        dots.style.display = "none";
+        readMoreButton.textContent = "Read less";
+      } else {
+        // Hide the extra text and reset button text
+        moreText.classList.add("hidden");
+        dots.style.display = "inline";
+        readMoreButton.textContent = "Read more";
+      }
+    });
+  }
+  
+  getAllAnimals();
+  
+  const items = document.querySelectorAll('li');
+  items.forEach(item => {
+    item.addEventListener('click', (e) => {
+      showAnimal(e.target.textContent);
+  
+    }
+    )
+  })
+  
+  
+  // This function returns animal data 
+  
+  const getAnimal = (animal) => {
+    return animals.find(o => o.name === animal) || null; // Return null if no match
+  }
+
+
+/*const button = document.querySelector(".menu li:nth-child(2) a"); 
 button.addEventListener("click", (event) => {
     event.preventDefault();
     
@@ -79,7 +141,7 @@ contents.forEach(content => {
         content.innerHTML = `${displayText}<span class = "dots">...</span><span class="hide more"> ${moreText}</span>`
 
     }
-});*/
+});
 function readMore(btn) {
     let post = btn.parentElement;
     console.log(post)
@@ -89,7 +151,7 @@ function readMore(btn) {
 }
 
 
-/*let searchInput = document.querySelector("#search")
+let searchInput = document.querySelector("#search")
 document.querySelector("#search").addEventListener("input", () => console.log(searchInput.value)) //input event(console logs every time yountype in the search bar)
 
 //document.querySelector("#search").addEventListener("change", () =>  console.log(searchInput.value)) //change event(console logs and displays in the console when you move the mouse)
