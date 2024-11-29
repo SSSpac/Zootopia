@@ -67,6 +67,7 @@ button.addEventListener("click", (event) => {
     const container = document.querySelector(".mammals-container");
     container.innerHTML = '';
 
+    
     animals.forEach(animal => {
         const animalInfo = document.createElement('div');
         animalInfo.classList.add('animal-info');
@@ -77,7 +78,7 @@ button.addEventListener("click", (event) => {
             <p><strong>Lifespan:</strong> ${animal.lifespan} years</p>
             <p><strong>Food:</strong> ${animal.food}</p>
             <p><strong>Description:</strong> ${animal.description}</p>
-                <button class="read-more">Read More</button>
+                <button onclick="readmore(this)" class="read-more">Read More</button>
             <p><strong>Length:</strong> ${animal.length} meters</p>
             <p><strong>Weight:</strong> ${animal.weight} kg</p>
             <p><strong>Found in:</strong> ${animal.found}</p>
@@ -86,6 +87,28 @@ button.addEventListener("click", (event) => {
         container.appendChild(animalInfo);
     });
 });
+
+/*let noOfCharac = 150;
+let animalInfo = document.querySelectorAll(".animalInfo")
+contents.forEach(content => {
+    if(content.textContent.length < noOfCharac) {
+        content.nextElementSibling.computedStyleMap.display = "none"
+    }
+    else{
+        let displayText = content.textContent.slice(0,noOfCharac);
+        let moreText = content.textContent.slice(noOfCharac);
+        console.log(displayText)
+        content.innerHTML = `${displayText}<span class = "dots">...</span><span class="hide more"> ${moreText}</span>`
+
+    }
+});*/
+function readMore(btn) {
+    let post = btn.parentElement;
+    console.log(post)
+    post.querySelector("dots").classList.toggle("hide");
+    post.querySelector("more").classList.toggle("hide");
+    btn.textContent == "Read More" ? btn.textContent = "Read Less" : btn.textContent = "Read More"
+}
 
 
 /*let searchInput = document.querySelector("#search")
