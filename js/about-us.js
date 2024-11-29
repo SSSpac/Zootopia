@@ -1,12 +1,14 @@
 mainContent = document.querySelector(".main-content");
 
-let teamContentCon = document.createElement("div")
-teamContentCon.classList.add("team-content-con")
-mainContent.append(teamContentCon)
+let teamContentCon = document.createElement("div");
+teamContentCon.classList.add("team-content-con");
+mainContent.append(teamContentCon);
 
-let mainTextTeam = document.createElement("h2")
-mainTextTeam.textContent = "Our Team"
-teamContentCon.append(mainTextTeam)
+
+let mainTextTeam = document.createElement("h2");
+mainTextTeam.textContent = "Our Team";
+teamContentCon.append(mainTextTeam);
+
 
 let teamContent = document.createElement("div");
 teamContent.classList.add("team-content");
@@ -14,77 +16,70 @@ teamContentCon.append(teamContent);
 
 
 const teamData = [
-    { name: "yevhenii", title: "Yevhenii", description: "Group Member", imgSrc: "./images/about-us/yevhenii.jpg" },
-    { name: "mikael", title: "Mikael", description: "Group Member", imgSrc: "./images/about-us/mikael.jpg" },
-    { name: "saifelislam", title: "Saifelislam", description: "Group Member", imgSrc: "./images/about-us/saif.jpg" },
-    { name: "andrew", title: "Andrew", description: "Group Member", imgSrc: "./images/about-us/andrew.jpg" },
-    { name: "saba", title: "Saba", description: "Group Member", imgSrc: "./images/about-us/saba.jpg" },
+  { name: "yevhenii", title: "Yevhenii", description: "Group Member", imgSrc: "./images/about-us/yevhenii.jpg" },
+  { name: "mikael", title: "Mikael", description: "Group Member", imgSrc: "./images/about-us/mikael.jpg" },
+  { name: "saifelislam", title: "Saifelislam", description: "Group Member", imgSrc: "./images/about-us/saif.jpg" },
+  { name: "andrew", title: "Andrew", description: "Group Member", imgSrc: "./images/about-us/andrew.jpg" },
+  { name: "saba", title: "Saba", description: "Group Member", imgSrc: "./images/about-us/saba.jpg" },
 ];
 
 
-teamData.forEach(member => {
-    let section = document.createElement("section");
-    section.classList.add(member.name, "team");
+teamData.forEach((member) => {
+  let section = document.createElement("section");
+  section.classList.add(member.name, "team");
 
-    let imgContainer = document.createElement("div");
-    imgContainer.classList.add(`${member.name}-picture`, "picture");
-    imgContainer.setAttribute("data-name", member.name);
 
-    let img = document.createElement("img");
-    img.src = member.imgSrc;
-    imgContainer.append(img);
+  let imgContainer = document.createElement("div");
+  imgContainer.classList.add(`${member.name}-picture`, "picture");
+  imgContainer.setAttribute("data-name", member.name);
 
-    let textContainer = document.createElement("div");
-    textContainer.classList.add(`${member.name}-text`, "teamsDescription");
-    textContainer.setAttribute("data-name", member.name);
+  let img = document.createElement("img");
+  img.src = member.imgSrc;
+  img.alt = `${member.title} picture`;
+  imgContainer.append(img);
 
-    let title = document.createElement("h2");
-    title.textContent = member.title;
 
-    let description = document.createElement("p");
-    description.textContent = member.description;
+  let title = document.createElement("h2");
+  title.classList.add("team-name");
+  title.setAttribute("data-name", member.name);
+  title.textContent = member.title;
 
-    textContainer.append(title, description);
-    section.append(imgContainer, textContainer);
 
-    teamContent.append(section);
+  let textContainer = document.createElement("div");
+  textContainer.classList.add("teamsDescription");
+  textContainer.setAttribute("data-name", member.name);
+  textContainer.innerHTML = `<p>${member.description}</p>`;
+
+  section.append(imgContainer, title, textContainer);
+  teamContent.append(section);
 });
 
 
+const updateInfo = (name) => {
+  const currentActive = document.querySelector(".featured-description");
+  const newDescription = document.querySelector(`.teamsDescription[data-name="${name}"]`);
+
+
+  if (currentActive) {
+    currentActive.classList.remove("featured-description");
+  }
+
+
+  if (currentActive && currentActive.getAttribute("data-name") === name) {
+    return;
+  }
 
 
 
-let teamTabs = Array.from(document.querySelectorAll(".picture"));
-let teamPerson = Array.from(document.querySelectorAll(".teamsDescription"));
-
-const findContent = dataName => {
-
-    teamPerson.forEach(descriptionDiv => {
-        descriptionDiv.classList.remove("featured-description");
-    });
-
-
-    const selectedDescription = teamPerson.find(
-        descriptionDiv => descriptionDiv.getAttribute("data-name") === dataName
-    );
-
-    if (selectedDescription) {
-        selectedDescription.classList.add("featured-description");
-    }
+  if (newDescription) {
+    newDescription.classList.add("featured-description");
+  }
 };
 
 
-teamTabs.forEach(picture =>
-    picture.addEventListener("click", () => {
-        const dataName = picture.getAttribute("data-name");
-        const associatedDescription = teamPerson.find(
-            descriptionDiv => descriptionDiv.getAttribute("data-name") === dataName);
-
-
-        if (associatedDescription.classList.contains("featured-description")) {
-            associatedDescription.classList.remove("featured-description");
-        } else {
-            findContent(dataName);
-        }
-    })
-);
+document.querySelectorAll(".picture, .team-name").forEach((element) => {
+  element.addEventListener("click", () => {
+    const name = element.getAttribute("data-name");
+    updateInfo(name);
+  });
+});
