@@ -57,7 +57,7 @@ let tasmanian_devil = new Animals ("Tasmanian Devil", 70, 10, 50, "A predator (e
   
 let quokka = new Animals ("quokka", 50, 3, 10, "Plant eaters", "The Quokka, Setonix brachyurus, was described by early Dutch explorer, Willem de Vlamingh, 'as a kind of rat as big as a common cat'. His first sighting of the Quokka was on an island off the mouth of the Swan River. He named the island Rottenest ('rat nest') in honour of this sighting. The island is now known as Rottnest Island. Essentially the Quokka looks very much like other wallabies.It has short, very coarse and thick grey-brown fur over most of the body with lighter parts underneath. Its facial features consist of a naked nose on a short, broad face with rounded furry ears.The tail is relatively short and mostly devoid of hair. In contrast, the hair on the feet extends to cover its claws.", "Rottnest Island and a few places on mainland Western Australia", "../images/quokka.jpg");
 
-let Animals = [echidna, tasmanian_devil, quokka];
+let animals = [echidna, tasmanian_devil, quokka];
 
 
 const button = document.querySelector(".menu li:nth-child(2) a"); 
@@ -104,4 +104,4 @@ const findTab = () => {
 }
 searchInput.addEventListener("input", findTab)
 
-//searchInput.addEventListener("change", findTab)*/
+searchInput.addEventListener("change", findTab)*/
