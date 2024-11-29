@@ -1,164 +1,54 @@
-let mainContent = document.querySelector(".main-content");
+mainContent = document.querySelector(".main-content");
+
+let teamContentCon = document.createElement("div")
+teamContentCon.classList.add("team-content-con")
+mainContent.append(teamContentCon)
+
+let mainTextTeam = document.createElement("h2")
+mainTextTeam.textContent = "Our Team"
+teamContentCon.append(mainTextTeam)
+
 let teamContent = document.createElement("div");
-
 teamContent.classList.add("team-content");
-mainContent.append(teamContent);
-
-// Yevhenii
-let yevhenii = document.createElement("section");
-yevhenii.classList.add("yevhenii");
-yevhenii.classList.add("team");
-teamContent.append(yevhenii);
-
-let yevheniiImg = document.createElement("div");
-yevheniiImg.classList.add("yevhenii-picture");
-yevheniiImg.classList.add("picture");
-
-yevheniiImg.setAttribute("data-name", "yevhenii");
-yevhenii.append(yevheniiImg);
-
-const img1 = document.createElement("img");
-img1.src = "./images/about-us/yevhenii.jpg";
-yevheniiImg.append(img1);
-
-let yevheniiText = document.createElement("div");
-yevheniiText.classList.add("yevhenii-text");
-yevheniiText.classList.add("teamsDescription");
-
-yevheniiText.setAttribute("data-name", "yevhenii");
-yevhenii.append(yevheniiText);
-
-let yevheniiTitle = document.createElement("h2");
-yevheniiTitle.textContent = "Yevhenii";
-let yevheniiDescription = document.createElement("p");
-yevheniiDescription.textContent = "Group Member";
-yevheniiText.append(yevheniiTitle, yevheniiDescription);
-
-// Mikael
-let mikael = document.createElement("section");
-mikael.classList.add("mikael");
-mikael.classList.add("team");
-teamContent.append(mikael);
-
-let mikaelImg = document.createElement("div");
-mikaelImg.classList.add("mikael-picture");
-mikaelImg.classList.add("picture");
-
-mikaelImg.setAttribute("data-name", "mikael");
-mikael.append(mikaelImg);
-
-const img2 = document.createElement("img");
-img2.src = "./images/about-us/mikael.jpg";
-mikaelImg.append(img2);
-
-let mikaelText = document.createElement("div");
-mikaelText.classList.add("mikael-text");
-mikaelText.classList.add("teamsDescription");
-
-mikaelText.setAttribute("data-name", "mikael");
-mikael.append(mikaelText);
-
-let mikaelTitle = document.createElement("h2");
-mikaelTitle.textContent = "Mikael";
-let mikaelDescription = document.createElement("p");
-mikaelDescription.textContent = "Group Member";
-mikaelText.append(mikaelTitle, mikaelDescription);
+teamContentCon.append(teamContent);
 
 
-// Saifelislam
-let saifelislam = document.createElement("section");
-saifelislam.classList.add("saifelislam");
-saifelislam.classList.add("team");
-teamContent.append(saifelislam);
-
-let saifelislamImg = document.createElement("div");
-saifelislamImg.classList.add("saifelislam-picture");
-saifelislamImg.classList.add("picture");
-
-saifelislamImg.setAttribute("data-name", "saifelislam");
-saifelislam.append(saifelislamImg);
-
-const img3 = document.createElement("img");
-img3.src = "./images/about-us/saif.jpg";
-saifelislamImg.append(img3);
-
-let saifelislamText = document.createElement("div");
-saifelislamText.classList.add("saifelislam-text");
-saifelislamText.classList.add("teamsDescription");
-
-saifelislamText.setAttribute("data-name", "saifelislam");
-saifelislam.append(saifelislamText);
-
-let saifelislamTitle = document.createElement("h2");
-saifelislamTitle.textContent = "Saifelislam";
-let saifelislamDescription = document.createElement("p");
-saifelislamDescription.textContent = "Group Member";
-saifelislamText.append(saifelislamTitle, saifelislamDescription);
+const teamData = [
+    { name: "yevhenii", title: "Yevhenii", description: "Group Member", imgSrc: "./images/about-us/yevhenii.jpg" },
+    { name: "mikael", title: "Mikael", description: "Group Member", imgSrc: "./images/about-us/mikael.jpg" },
+    { name: "saifelislam", title: "Saifelislam", description: "Group Member", imgSrc: "./images/about-us/saif.jpg" },
+    { name: "andrew", title: "Andrew", description: "Group Member", imgSrc: "./images/about-us/andrew.jpg" },
+    { name: "saba", title: "Saba", description: "Group Member", imgSrc: "./images/about-us/saba.jpg" },
+];
 
 
+teamData.forEach(member => {
+    let section = document.createElement("section");
+    section.classList.add(member.name, "team");
 
-// Andrew
-let andrew = document.createElement("section");
-andrew.classList.add("andrew");
-andrew.classList.add("team");
-teamContent.append(andrew);
+    let imgContainer = document.createElement("div");
+    imgContainer.classList.add(`${member.name}-picture`, "picture");
+    imgContainer.setAttribute("data-name", member.name);
 
-let andrewImg = document.createElement("div");
-andrewImg.classList.add("andrew-picture");
-andrewImg.classList.add("picture");
+    let img = document.createElement("img");
+    img.src = member.imgSrc;
+    imgContainer.append(img);
 
-andrewImg.setAttribute("data-name", "andrew");
-andrew.append(andrewImg);
+    let textContainer = document.createElement("div");
+    textContainer.classList.add(`${member.name}-text`, "teamsDescription");
+    textContainer.setAttribute("data-name", member.name);
 
-const img4 = document.createElement("img");
-img4.src = "./images/about-us/andrew.jpg";
-andrewImg.append(img4);
+    let title = document.createElement("h2");
+    title.textContent = member.title;
 
-let andrewText = document.createElement("div");
-andrewText.classList.add("andrew-text");
-andrewText.classList.add("teamsDescription");
+    let description = document.createElement("p");
+    description.textContent = member.description;
 
-andrewText.setAttribute("data-name", "andrew");
-andrew.append(andrewText);
+    textContainer.append(title, description);
+    section.append(imgContainer, textContainer);
 
-let andrewTitle = document.createElement("h2");
-andrewTitle.textContent = "Andrew";
-let andrewDescription = document.createElement("p");
-andrewDescription.textContent = "Group Member";
-andrewText.append(andrewTitle, andrewDescription);
-
-
-
-
-// Saba
-let saba = document.createElement("section");
-saba.classList.add("saba");
-saba.classList.add("team");
-teamContent.append(saba);
-
-let sabaImg = document.createElement("div");
-sabaImg.classList.add("saba-picture");
-sabaImg.classList.add("picture");
-
-sabaImg.setAttribute("data-name", "saba");
-saba.append(sabaImg);
-
-const img5 = document.createElement("img");
-img5.src = "./images/about-us/saba.jpg";
-sabaImg.append(img5);
-
-let sabaText = document.createElement("div");
-sabaText.classList.add("saba-text");
-sabaText.classList.add("teamsDescription");
-
-sabaText.setAttribute("data-name", "saba");
-saba.append(sabaText);
-
-let sabaTitle = document.createElement("h2");
-sabaTitle.textContent = "Saba";
-let sabaDescription = document.createElement("p");
-sabaDescription.textContent = "Group Member";
-sabaText.append(sabaTitle, sabaDescription);
+    teamContent.append(section);
+});
 
 
 
@@ -198,9 +88,3 @@ teamTabs.forEach(picture =>
         }
     })
 );
-
-
-
-
-
-
