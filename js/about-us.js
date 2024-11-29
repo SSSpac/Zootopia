@@ -16,11 +16,11 @@ teamContentCon.append(teamContent);
 
 
 const teamData = [
-  { name: "yevhenii", title: "Yevhenii", description: "Group Member", imgSrc: "./images/about-us/yevhenii.jpg" },
-  { name: "mikael", title: "Mikael", description: "Group Member", imgSrc: "./images/about-us/mikael.jpg" },
-  { name: "saifelislam", title: "Saifelislam", description: "Group Member", imgSrc: "./images/about-us/saif.jpg" },
-  { name: "andrew", title: "Andrew", description: "Group Member", imgSrc: "./images/about-us/andrew.jpg" },
-  { name: "saba", title: "Saba", description: "Group Member", imgSrc: "./images/about-us/saba.jpg" },
+  { name: "yevhenii", title: "Yevhenii", description: "Group Member", imgSrc: "../images/about-us/yevhenii.jpg" },
+  { name: "mikael", title: "Mikael", description: "Group Member", imgSrc: "../images/about-us/mikael.jpg" },
+  { name: "saifelislam", title: "Saifelislam", description: "Group Member", imgSrc: "../images/about-us/saif.jpg" },
+  { name: "andrew", title: "Andrew", description: "Group Member", imgSrc: "../images/about-us/andrew.jpg" },
+  { name: "saba", title: "Saba", description: "Group Member", imgSrc: "../images/about-us/saba.jpg" },
 ];
 
 
