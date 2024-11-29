@@ -118,6 +118,14 @@
     display: none;
 }
 
+.animal-name {
+    font-size: 2rem;
+}
+
+.animal-div p{
+    background-color: aquamarine;
+}
+
 @media screen and (max-width: 1100px) {
 
     
