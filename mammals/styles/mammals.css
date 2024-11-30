@@ -245,11 +245,11 @@
 }
 
 html {
-    background-color: #59857a;
     height: 100vh;
 }
 
 body {
+    background-color: #42434a;
     display: flex;
     flex-direction: column;
     margin: 0;
@@ -258,25 +258,25 @@ body {
 }
 
 .header, .footer {
-    background-color: #527d6a;
-    padding: 32px;
+    background-color: #b0b3c1;
+    padding: 16px;
     text-align: center;
 }
 
 .page-title {
-   color: #1c4738;
-   font-size: 4rem;
+   color: #5e63ff;
+   font-size: 2rem;
    margin: 0;
 }
 
 .main-content {
   display: flex;
   flex-grow: 1;
-  font-size: 1.4rem
+  font-size: 1rem
 }
 
 .sidebar{
-  background-color: #458969;
+  background-color: #11121a;
   flex: 0 0 25%;
   padding: 16px;
   font-weight: bold;
@@ -292,6 +292,20 @@ body {
 
 .animal_name {
     color: bisque;
+}
+
+.sidebar li {
+    color: bisque;
+    padding: 16px;
+    cursor: pointer;
+    list-style-type: none;
+    font-size: 1.5rem;
+   
+}
+
+.read-more {
+    border-radius: 16px;
+    padding: 16px;
 }
 
 

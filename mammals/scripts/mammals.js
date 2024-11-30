@@ -25,20 +25,20 @@ const getAllAnimals = () => {
       animal_info.innerHTML = animal_info.innerHTML + `<li>${e.name}</li>`;
     });
   }
-  
+
   
   const showAnimal = (index) => {
     const animals = document.getElementById("content");
     let animal = getAnimal(index);
     animals.innerHTML = ` 
     <h2 class="animal_name">${animal.name}</h2> 
-      <img src="${animal.image}" alt="${animal.name}" class="animal_imge"> 
-      <p><strong>Group:</strong> ${animal.group}</p>
-      <p><strong>Lifespan:</strong> ${animal.lifespan}</p>
-      <p><strong>Weight:</strong> ${animal.weight}</p>
+      <img src="${animal.image}" alt="${animal.name}" class="image"> 
+      <p><strong>Length:</strong> ${animal.length} meters</p>
+      <p><strong>Lifespan:</strong> ${animal.lifespan} years</p>
+      <p><strong>Weight:</strong> ${animal.weight} kg</p>
       <p><strong>Found:</strong> ${animal.found}</p>
       <p><strong>Food:</strong> ${animal.food}</p>
-      <p>${animal.description.substring(0, 200)}
+      <p><strong>Description:</strong> ${animal.description.substring(0, 38)}
       <span class="dots">...</span>
       <span class="more hidden">${animal.description.substring(200)}</span></p>
       <button class="read-more">Read more</button> `;
