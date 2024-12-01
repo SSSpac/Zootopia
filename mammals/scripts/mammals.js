@@ -42,20 +42,18 @@ const getAllAnimals = () => {
       <span class="dots">...</span>
       <span class="more hidden">${animal.description.substring(200)}</span></p>
       <button class="read-more">Read more</button> `;
-    // Add an event listener to the "Read more" button
+
     const readMoreButton = animals.querySelector(".read-more");
-    readMoreButton.addEventListener("click", function () {
+    readMoreButton.addEventListener("click", function () {  // Add an event listener to the "Read more" button
       const dots = animals.querySelector(".dots");
       const moreText = animals.querySelector(".more");
   
-      if (moreText.classList.contains("hidden")) {
-        // Show the hidden text and update button text
+      if (moreText.classList.contains("hidden")) {// Shows text
         moreText.classList.remove("hidden");
         dots.style.display = "none";
         readMoreButton.textContent = "Read less";
       } else {
-        // Hide the extra text and reset button text
-        moreText.classList.add("hidden");
+        moreText.classList.add("hidden"); // Hide extra words
         dots.style.display = "inline";
         readMoreButton.textContent = "Read more";
       }
