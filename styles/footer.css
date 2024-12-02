@@ -1,6 +1,5 @@
 
 footer {
-    background-color: black;
     padding-top: 50px;
     width: 100%;
 }
@@ -18,13 +17,12 @@ footer p {
 .footer-content{
     width: auto;
 }
+
 h3 {
-    font-size: 28px;
+    font-size: 1rem;
     margin-bottom: 15px;
     text-align: center;
 }
-
-
 
 .footer-content ul {
     text-align: center;
@@ -38,7 +36,7 @@ h3 {
 
 .info  p{
     color: white;
-    font-size: 25px;
+    font-size: 1rem;
 }
 
 .list {
@@ -46,7 +44,7 @@ h3 {
     padding: 0;
 }
 .list a {
-    font-size:25px;
+    font-size:1rem;
     color: white;
 }
 
@@ -81,7 +79,7 @@ h3 {
 }
 .social-icons i {
     color: white;
-    font-size: 25px;
+    font-size: 1rem;
 }
 
 a {
@@ -97,7 +95,7 @@ a:hover {
     background-color: rgb(84, 207, 198);
     text-align: center;
     padding: 10px 0;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 .bottom-bar p {
