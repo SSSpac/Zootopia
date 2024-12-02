@@ -26,6 +26,19 @@ const getAllAnimals = () => {
   });
 }
 
+let switchStatus = true;
+
+$(".animal_names").on("click", function () {
+  if (switchStatus === false) {
+    $(".content").css("background-color", "white");
+    switchStatus = true;
+  } else if (switchStatus === true) {
+    $(".content").css("background-color", "blue");
+    switchStatus = false;
+  }
+});
+
+
 const showAnimal = (animal_position) => {   //function
   const animals = document.querySelector(".content"); //will display in the content bar in html
   let animal = getAnimal(animal_position);
@@ -59,6 +72,7 @@ const showAnimal = (animal_position) => {   //function
   });
 }
 
+
 getAllAnimals();
 
 const items = document.querySelectorAll("li");
@@ -70,9 +84,10 @@ items.forEach(item => {
   )
 })
 
-
 // This function returns animal data 
 
 const getAnimal = (animal) => {
-  return animals.find(object => object.name === animal) || null; // Return null if no match
+  return animals.find(object => object.name === animal) || null;
 }
+
+
