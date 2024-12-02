@@ -16,6 +16,11 @@ body {
   box-shadow: var(--shadow-dark);
   display: flex;
   flex-direction: column;
+  
+}
+.container {
+  text-align: center;
+ 
 }
 
 .header {
