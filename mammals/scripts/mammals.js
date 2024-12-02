@@ -26,39 +26,6 @@ const getAllAnimals = () => {
   });
 }
 
-/*let switchStatus = true;
-
-$(".animal_names").on("click", function () {
-  if (switchStatus === false) {
-    $(".content").css("background-color", "white");
-    switchStatus = true;
-  } else if (switchStatus === true) {
-    $(".content").css("background-color", "blue");
-    switchStatus = false;
-  }
-});
-
-const clickCount = {};
-
-function updateContent(animals) {
-  const contentContainer = document.getElementById("main-content");
-
-  if (!clickCount[animal]) {
-    clickCount[animal] = 0;
-  }
-  
-  clickCount[animal]++;
-
-  if (clickCount[animal] === 2) {
-    contentContainer.innerHTML = `
-      <h2>Welcome</h2>
-      <p>G'day and welcome to our site showcasing the incredible wildlife of Australia! Prepare to be amazed by the stunning images and information about some of the most unique and diverse creatures on this planet. From odd birds to feisty Tasmanian Devils, we've got it all covered here. Whether you're a nature enthusiast looking to learn more about Aussie animals or just stopping by for a virtual safari, we promise you'll be thoroughly entertained. So sit back, relax, and enjoy exploring the wonders of Down Under through our collection of photos and fun facts. And who knows, maybe you'll even discover your new favorite animal along the way! Cheers mate!</p>
-    `;
-    clickCount[animal] = 0; 
-    return;
-  }*/
-
-
 const showAnimal = (animal_position) => {   //function
   const animals = document.querySelector(".content"); //will display in the content bar in html
   let animal = getAnimal(animal_position);
@@ -92,7 +59,6 @@ const showAnimal = (animal_position) => {   //function
   });
 }
 
-
 getAllAnimals();
 
 const items = document.querySelectorAll("li");
@@ -104,10 +70,9 @@ items.forEach(item => {
   )
 })
 
+
 // This function returns animal data 
 
 const getAnimal = (animal) => {
-  return animals.find(object => object.name === animal) || null;
+  return animals.find(object => object.name === animal) || null; // Return null if no match
 }
-
-
