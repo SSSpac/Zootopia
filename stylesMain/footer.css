@@ -9,6 +9,10 @@ footer p {
     color: white;
 }
 
+.footer-content h3 {
+    color: white;
+}
+
 .container {
     width: auto;
     margin: auto;
