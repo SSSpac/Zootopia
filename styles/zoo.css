@@ -19,11 +19,6 @@ body {
   flex-direction: column;
 }
 
-.header {
-  background-color: #b0b3c1;
-  text-align: center;
-
-}
 
 .page-title {
   color: var(--accent-color);

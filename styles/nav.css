@@ -18,6 +18,10 @@
     display: flex;
 }
 
+.header li {
+    list-style: none;
+}
+
 .menu li .active {
     text-decoration: underline;
     text-underline-offset: 5px;
