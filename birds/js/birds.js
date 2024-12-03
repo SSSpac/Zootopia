@@ -53,6 +53,19 @@ button.addEventListener("click", (event) => {
     event.preventDefault();
 
     const container = document.getElementById('bird-info-container');
+    container.innerHTML = '<h2>Hi and Welcome to the Birds page, we have three different birds here at the Zoo, to find more information about them, click on the button on the life side in the sidebar, to find out more!</h2>';
+
+    const viewBirdsButton = document.createElement('button');
+    viewBirdsButton.textContent = "View Birds";
+    container.appendChild(viewBirdsButton);
+
+    viewBirdsButton.addEventListener("click", () => {
+        displayBirdInfo();
+    });
+});
+
+function displayBirdInfo() {
+    const container = document.getElementById('bird-info-container');
     container.innerHTML = '';
 
     animals.forEach(animal => {
@@ -75,7 +88,7 @@ button.addEventListener("click", (event) => {
         `;
         container.appendChild(animalInfo);
     });
-});
+}
 
 function myFunction(button) {
     const animalInfo = button.closest('.animal-info');
