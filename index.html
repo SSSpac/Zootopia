@@ -1,21 +1,22 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Australia zoo</title>
-  <link rel="stylesheet" href="./styles/zoo.css">
-  <link rel="stylesheet" href="./styles/layout.css">
-  <link rel="stylesheet" href="./styles/nav.css">
-  <link rel="stylesheet" href="./styles/reset.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/nav.css">
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+    <link rel="stylesheet" href="./styles_Index/layout.css">
+    <link rel="stylesheet" href="./styles_Index/index.css">
+    <script src="./js/Home-page.js" defer></script>
+</head>
 
-  
-  <script src="./scripts/zoo.js" defer></script>
+</head>
+<body>
+   
 </head>
 <body>
     <header class="header">
@@ -25,127 +26,116 @@
                     <img src="#" alt="logo"> 
                 </a>
             </div>
-          <h1 class="page-title">Zootopia</h1>
-              
-          <ul class="menu">
-              <li><a href="#" class="active">Home</a></li>
-              <li><a href="./mammals/mammals.html">Mammals</a></li>
-              <li><a href="#">Reptiles</a></li>
-              <li><a href="#">Birds</a></li>
-          </ul>
-          <a class="btn" href="#question">About us</a>
-          
-          <span class="nav__bar">
-              <nav>
-                  <ul class="top__menu">
-                      <li>
-                          <input type="checkbox" id="menu-toggle" class="menu-toggle">
-                              <label for="menu-toggle" class="menu-icon">
-                                  <span></span>
-                                  <span></span>
-                                  <span></span>
-                              </label>
-                          <ul class="sub__menu">
-                              <li>
-                                  <a href="#">Home</a>
-                              </li>
-          
-                              <li>
-                                  <a href="#">Mammals</a>
-                              </li>
-          
-                              <li>
-                                  <a href="#">Reptiles</a>
-                              </li>
-          
-                              <li>
-                                  <a href="#">Birds</a>
-                              </li>
-  
-                              <li>
-                                  <a href="#">About us</a>
-                              </li>
-                          </ul>
-                      </li>
-                  </ul>
-              </nav>
-          </span>
-  
-  
-      </nav>
-    </header>
-    <div class="content">
-  <nav id="sidebar">
-    <ul>
-      <li>
-        <button onclick=toggleSidebar() id="toggle-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m313-480 155 156q11 11 11.5 27.5T468-268q-11 11-28 11t-28-11L228-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T468-692q11 11 11 28t-11 28L313-480Zm264 0 155 156q11 11 11.5 27.5T732-268q-11 11-28 11t-28-11L492-452q-6-6-8.5-13t-2.5-15q0-8 2.5-15t8.5-13l184-184q11-11 27.5-11.5T732-692q11 11 11 28t-11 28L577-480Z"/></svg>
-        </button>
-      </li>
-      
-      <li class="active">
-        <a href="index.html">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M240-200h120v-200q0-17 11.5-28.5T400-440h160q17 0 28.5 11.5T600-400v200h120v-360L480-740 240-560v360Zm-80 0v-360q0-19 8.5-36t23.5-28l240-180q21-16 48-16t48 16l240 180q15 11 23.5 28t8.5 36v360q0 33-23.5 56.5T720-120H560q-17 0-28.5-11.5T520-160v-200h-80v200q0 17-11.5 28.5T400-120H240q-33 0-56.5-23.5T160-200Zm320-270Z"/></svg>
-          <span>Home</span>
-        </a>
-      </li>
-
-      <li>
-        <button onclick=toggleSubMenu(this) class="dropdown-btn">
-          <span>Animals</span>
-          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z"/></svg>
-        </button>
-        <ul class="sub-menu">
-          <div>
-            <li><a href="#">Parrot</a></li>
-            <li><a href="#">Eagle</a></li>
-            <li><a href="#">Ostrich</a></li>
-            <li><a href="#">Dolphines</a></li>
-            <li><a href="#">Dogs</a></li>
-            <li><a href="#">Cats</a></li>
-            <li><a href="#">Whales</a></li>
-            <li><a href="#">Crocodiles</a></li>
-            <li><a href="#">Lizards</a></li>
-            <li><a href="#">Snakes</a></li>
-            <li><a href="#">Dinasaurs</a></li>
+            <ul class="menu">
+                <li><a href="./index.html" class="active">Home</a></li>
+                <li><a href="#">Mammals</a></li>
+                <li><a href="#">Reptiles</a></li>
+                <li><a href="#">Birds</a></li>
+            </ul>
+            <a class="btn" href="./our-team.html">About us</a>
             
-          </div>
-        </ul>
-      </li>
+            <span class="nav__bar">
+                <nav>
+                    <ul class="top__menu">
+                        <li>
+                            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                                <label for="menu-toggle" class="menu-icon">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </label>
+                            <ul class="sub__menu">
+                                <li>
+                                    <a href="./index.html">Home</a>
+                                </li>
+            
+                                <li>
+                                    <a href="#">Mammals</a>
+                                </li>
+            
+                                <li>
+                                    <a href="#">Reptiles</a>
+                                </li>
+            
+                                <li>
+                                    <a href="#">Birds</a>
+                                </li>
+    
+                                <li>
+                                    <a href="./our-team.html">About us</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </span>
+        </nav>
+    </header>
+        <section class="main-content">
+        </section>
+        <div class="content">
+            <nav id="sidebar">
+              <ul>
+                  <button onclick=toggleSubMenu(this) class="dropdown-btn">
+                    <img src="./images/animals.png" alt="birds logo" width="40px" height="50px">
+                    <span>Animals</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z"/></svg>
+                  </button>
+                  <ul class="sub-menu">
+                    <div>
+        <a  class="animal-button" data-animal="Echidna">Echidna</a>
+        <a  class="animal-button" data-animal="TasmanianDevil">Tasmanian Devil</a>
+        <a  class="animal-button" data-animal="Quokka">Quokka</a>
+        <a  class="animal-button" data-animal="FrillNeckedLizard">frill-necked lizard</a>
+        <a  class="animal-button" data-animal="HawksbillTurtle">Hawksbill turtle</a>
+        <a  class="animal-button" data-animal="Perentie">Perentie</a>
+        <a  class="animal-button" data-animal="Cassowary">Cassowary</a>
+        <a  class="animal-button" data-animal="Kookaburra">Kookaburra</a>
+        <a class="animal-button" data-animal="YellowTailedBlackCockatoo">Yellow Tailed Black Cockatoo</a>
+      </div>
     </ul>
-    <footer>
-      <div class="container">
-         <div class="footer-content"></div>
-         <ul class="info">
-         <h3>Contact us</h3>
-         <p>Email:info@cmeducations.se</p>
-         <p>Hammarby Fabriksväg 61
-          <p> 120 30 Stockholm </p>
-         <p> +46(0)8 33 60 15</p>
-         
-         <div class="footer-content">
-          <h3>Follow us</h3>
-          <ul class="social-icons">
-          <li><a href="https://cmeducations.se/"><i class="fab fa-facebook"></i></a></li>
-          <li><a href="https://www.youtube.com/watch?v=JxS5E-kZc2s"><i class="fab fa-twitter"></i></a></li>
-          <li><a href="https://www.instagram.com/futuregamesedu/"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="https://github.com/SSSpac/Australia-zoo-7"><i class="fab fa-linkedin"></i></a></li>
-         </ul>
-         </div>
+    </nav>
+    <main>
+        <h2>Hello!</h2>
+      <div class="container" id="main-content">
+        <p> G'day and welcome to our site showcasing the incredible wildlife of Australia! Prepare to be amazed by the stunning images and  about somme of the most unique and diverse creatures on this planet. From odd birds to feisty Tasmanian Devils, we've got it all covered here. Whether you're a nature enthusiast looking to learn more about Aussie animals or just stopping by for a virtual safari, we promise you'll be thoroughly entertained. So sit back, relax, 
+          and enjoy exploring the wonders of Down Under through our collection of photos and fun facts. And who knows, maybe you'll even discover your new favorite animal along the way! Cheers mate!</p>
+        <img src="./images/kangaroo.jpg" width="60%" height="auto"> 
+        </main>
       </div>
-  <div class="bottom-bar"></div>
-  <p>&copy;2024 Changemaker Educations</p>
-  </footer>
-  </nav>
-
-  <main>
-      <div class="popup">
-        <button id="close">&times;</button>
-        <h2>Welcome to Zootopia, the Australian Zoo</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto reiciendis dolore dolorem voluptatibus iusto quam quas similique, doloremque ratione repudiandae consequatur inventore sed, perferendis ipsum! Iure dolorem eius delectus magnam?</p>
-        <a href="#">Let's Go</a>
-      </div>
-  </main>
 </body>
 
+<footer>
+    <div class="container">
+       <div class="footer-content"></div>
+       <ul class="info">
+       <h3>Contact us</h3>
+       <p>Email:info@cmeducations.se</p>
+       <p>Hammarby Fabriksväg 61
+        <p> 120 30 Stockholm </p>
+       <p> +46(0)8 33 60 15</p>
+       
+    </ul>
+       <div class="footer-content"></div>
+       <ul class="list">
+        <li><a href="Home.index">Home</a></li>
+        <li><a href="reptiles.html">Reptiles</a></li>
+        <li><a href="Mammals.html">Mammals</a></li>
+        <li><a href="Bird.html">Birds</a></li>
+       </ul>
+       <div class="footer-content">
+        <h3>Follows us</h3>
+        <ul class="social-icons">
+        <li><a href="https://cmeducations.se/"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="https://www.youtube.com/watch?v=JxS5E-kZc2s"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.instagram.com/futuregamesedu/"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://github.com/SSSpac/Australia-zoo-7"><i class="fab fa-linkedin"></i></a></li>
+       </ul>
+       </div>
+    </div>
+<div class="bottom-bar"></div>
+<p>&copy;2024 Changemaker Educations</p>
+</footer>
+
+</body>
 </html>
