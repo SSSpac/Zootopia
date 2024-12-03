@@ -15,7 +15,6 @@ body {
 }
 
 .header {
-    background-color: #b0b3c1;
     text-align: center;
 }
 
@@ -33,17 +32,21 @@ body {
 
 .sidebar {
     background-color: #11121a;
+    border-right-color: whitesmoke;
     flex: 0 0 25%;
     padding: 16px;
-    font-weight: bold;
     padding-top: 50px;
     font-style: normal;
-
 }
 
 .main {
     flex-grow: 1 0 auto;
     padding: 20px;
+}
+
+h2 {
+   color: bisque;
+    text-align: center;
 }
 
 .animal_name {
@@ -57,11 +60,12 @@ body {
     list-style-type: none;
     font-size: 1.5rem;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+
 }
 
 .footer {
     background-color: #b0b3c1;
-    padding: 16px;
+    padding: 8px;
     text-align: center;
 }
 
@@ -71,6 +75,14 @@ body {
     background-color: bisque;
 }
 
+img {
+    width: 90px;;
+    height: auto;
+}
+
+.dropdown {
+    display: none;
+}
 .menu-toggle,
 .submenu-toggle {
     display: none;
@@ -90,12 +102,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(0, 0, 0);
-    padding: 2rem 4rem;
-}
-
-.nav-logo {
-    width: 126px;
+    background-color: #11121a;
+    padding: 8px;
 }
 
 .menu {
@@ -140,13 +148,6 @@ body {
 .btn:active {
     transform: translateY(2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-@media screen and (max-width: 768px) {
-    .main-content {
-        display: grid;
-    }
-   
 }
 
 .hidden {
