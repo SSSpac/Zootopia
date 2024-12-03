@@ -18,6 +18,9 @@ let quokka = new Animals("Quokka", 50, 3, 10, "Plant eaters", "The Quokka, Seton
 
 let animals = [echidna, tasmanian_devil, quokka];
 
+const welcomeMessage = document.querySelector(".content");
+welcomeMessage.innerHTML = "<h2>Welcome to mammals</h2> <p>A mammal (from Latin mamma 'breast') is a vertebrate animal of the class Mammalia. Mammals are characterised by the presence of milk-producing mammary glands for feeding their young, a broad neocortex region of the brain, fur or hair, and three middle ear bones. These characteristics distinguish them from reptiles and birds, from which their ancestors diverged in the Carboniferous Period over 300 million years ago. Around 6,400 extant species of mammals have been described and divided into 27 orders. The study of mammals is called mammalogy. The largest orders of mammals, by number of species, are the rodents, bats, and eulipotyphlans (including hedgehogs, moles and shrews). The next three are the primates (including humans, monkeys and lemurs), the even-toed ungulates (including pigs, camels, and whales), and the Carnivora (including cats, dogs, and seals).</p>"
+
 
 const getAllAnimals = () => {
   animals.forEach(event => {
@@ -59,6 +62,7 @@ const showAnimal = (animal_position) => {   //function
   });
 }
 
+
 getAllAnimals();
 
 const items = document.querySelectorAll("li");
@@ -70,9 +74,10 @@ items.forEach(item => {
   )
 })
 
-
 // This function returns animal data 
 
 const getAnimal = (animal) => {
-  return animals.find(object => object.name === animal) || null; // Return null if no match
+  return animals.find(object => object.name === animal);
 }
+
+
