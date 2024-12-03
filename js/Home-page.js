@@ -1,36 +1,57 @@
 
-const sidebar = document.getElementById('sidebar')
+const sidebar = document.getElementById("sidebar"); 
 
-function toggleSidebar(){
-  sidebar.classList.toggle('close') 
-  toggleButton.classList.toggle('rotate')
-
-  closeAllSubMenus()
+function toggleSidebar() {
+  sidebar.classList.toggle("close");
+  toggleButton.classList.toggle("rotate");
+  closeAllSubMenus();
 }
 
-function toggleSubMenu(button){
-
-  if(!button.nextElementSibling.classList.contains('show')){
-    closeAllSubMenus()
+function toggleSubMenu(button) {
+  if (!button.nextElementSibling.classList.contains("show")) {
+    closeAllSubMenus();
   }
 
-  button.nextElementSibling.classList.toggle('show')
-  button.classList.toggle('rotate')
+  button.nextElementSibling.classList.toggle("show");
+  button.classList.toggle("rotate");
 
-  if(sidebar.classList.contains('close')){
-    sidebar.classList.toggle('close')
-    toggleButton.classList.toggle('rotate')
+  if (sidebar.classList.contains("close")) {
+    sidebar.classList.toggle("close");
+    toggleButton.classList.toggle("rotate");
   }
 }
 
-function closeAllSubMenus(){
-  Array.from(sidebar.getElementsByClassName('show')).forEach(ul => {
-    ul.classList.remove('show')
-    ul.previousElementSibling.classList.remove('rotate')
-  })
+function closeAllSubMenus() {
+  Array.from(sidebar.getElementsByClassName("show")).forEach(ul => {
+    ul.classList.remove("show");
+    ul.previousElementSibling.classList.remove("rotate");
+  });
 }
 
+const animalLinks = [
+  { name: "Echidna", dataAnimal: "Echidna" },
+  { name: "Tasmanian Devil", dataAnimal: "TasmanianDevil" },
+  { name: "Quokka", dataAnimal: "Quokka" },
+  { name: "Frill-necked Lizard", dataAnimal: "FrillNeckedLizard" },
+  { name: "Hawksbill Turtle", dataAnimal: "HawksbillTurtle" },
+  { name: "Perentie", dataAnimal: "Perentie" },
+  { name: "Cassowary", dataAnimal: "Cassowary" },
+  { name: "Kookaburra", dataAnimal: "Kookaburra" },
+  { name: "Yellow Tailed Black Cockatoo", dataAnimal: "YellowTailedBlackCockatoo" }
+];
 
+animalLinks.forEach(animal => {
+  const link = document.createElement("a");
+  link.className = "animal-button";
+  link.dataset.animal = animal.dataAnimal;
+  link.textContent = animal.name;
+
+  link.addEventListener("click", () => {
+    updateContent(animal.dataAnimal);
+  });
+
+  sidebar.appendChild(link);
+});
 
 const animals = {
   Echidna: {
@@ -115,15 +136,14 @@ function updateContent(animal) {
   if (!clickCount[animal]) {
     clickCount[animal] = 0;
   }
-  
+
   clickCount[animal]++;
 
   if (clickCount[animal] === 2) {
     contentContainer.innerHTML = `
-      <h2>Welcome</h2>
-      <p>G'day and welcome to our site showcasing the incredible wildlife of Australia! Prepare to be amazed by the stunning images and information about some of the most unique and diverse creatures on this planet. From odd birds to feisty Tasmanian Devils, we've got it all covered here. Whether you're a nature enthusiast looking to learn more about Aussie animals or just stopping by for a virtual safari, we promise you'll be thoroughly entertained. So sit back, relax, and enjoy exploring the wonders of Down Under through our collection of photos and fun facts. And who knows, maybe you'll even discover your new favorite animal along the way! Cheers mate!</p>
+      <p>G'day and welcome to our site showcasing the incredible wildlife of Australia! Prepare to be amazed by the stunning images and information about some of the most unique and diverse creatures on this planet. From odd birds to feisty Tasmanian Devils, we've got it all covered here.</p>
     `;
-    clickCount[animal] = 0; 
+    clickCount[animal] = 0;
     return;
   }
 
@@ -139,9 +159,3 @@ function updateContent(animal) {
     </a>
   `;
 }
-
-
-document.querySelectorAll(".animal-button").forEach(button => {
-  const animalKey = button.dataset.animal;
-  button.addEventListener("click", () => updateContent(animalKey));
-});
