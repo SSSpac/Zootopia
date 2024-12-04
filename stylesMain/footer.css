@@ -17,6 +17,7 @@ footer p {
 
 .container {
     width: auto;
+    margin:auto;
     display: flex;
     justify-content: center;
     padding: 0; 
