@@ -1,32 +1,4 @@
 
-const sidebar = document.getElementById("sidebar"); 
-
-function toggleSidebar() {
-  sidebar.classList.toggle("close");
-  toggleButton.classList.toggle("rotate");
-  closeAllSubMenus();
-}
-
-function toggleSubMenu(button) {
-  if (!button.nextElementSibling.classList.contains("show")) {
-    closeAllSubMenus();
-  }
-
-  button.nextElementSibling.classList.toggle("show");
-  button.classList.toggle("rotate");
-
-  if (sidebar.classList.contains("close")) {
-    sidebar.classList.toggle("close");
-    toggleButton.classList.toggle("rotate");
-  }
-}
-
-function closeAllSubMenus() {
-  Array.from(sidebar.getElementsByClassName("show")).forEach(ul => {
-    ul.classList.remove("show");
-    ul.previousElementSibling.classList.remove("rotate");
-  });
-}
 
 const animalLinks = [
   { name: "Echidna", dataAnimal: "Echidna" },
@@ -154,8 +126,10 @@ function updateContent(animal) {
     <p>${selectedAnimal.Information}</p>
     <p><strong>Food:</strong> ${selectedAnimal.Food}</p>
     <p><strong>Lifespan:</strong> ${selectedAnimal.Lifespan}</p>
-    <a href="test.html" style="margin-top: 10px; display: inline-block; padding: 10px; background-color: grey; color: white; text-decoration: none; border-radius: 5px;">
-      Group: ${selectedAnimal.Group}
+    <a href="reptiles.html" style="margin-top: 10px; display: inline-block; padding: 10px; background-color: grey; color: white; text-decoration: none; border-radius: 5px;">
+  
+    Group: ${selectedAnimal.Group}
     </a>
+    
   `;
 }
