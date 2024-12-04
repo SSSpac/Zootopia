@@ -21,7 +21,6 @@ let animals = [echidna, tasmanian_devil, quokka];
 const welcomeMessage = document.querySelector(".content");
 welcomeMessage.innerHTML = "<h2>Welcome to mammals</h2> <p>A mammal (from Latin mamma 'breast') is a vertebrate animal of the class Mammalia. Mammals are characterised by the presence of milk-producing mammary glands for feeding their young, a broad neocortex region of the brain, fur or hair, and three middle ear bones. These characteristics distinguish them from reptiles and birds, from which their ancestors diverged in the Carboniferous Period over 300 million years ago. Around 6,400 extant species of mammals have been described and divided into 27 orders. The study of mammals is called mammalogy. The largest orders of mammals, by number of species, are the rodents, bats, and eulipotyphlans (including hedgehogs, moles and shrews). The next three are the primates (including humans, monkeys and lemurs), the even-toed ungulates (including pigs, camels, and whales), and the Carnivora (including cats, dogs, and seals).</p>"
 
-
 const getAllAnimals = () => {
   animals.forEach(event => {
     const animal_info = document.querySelector(".animal_names");
@@ -42,26 +41,27 @@ const showAnimal = (animal_position) => {   //function
     <p><strong>Food:</strong> ${animal.food}</p>
     <p><strong>Description:</strong> ${animal.description.substring(0, 38)} 
     <span class="dots">...</span>
-    <span class="more hidden">${animal.description.substring()}</span></p>
+    <span class="more">${animal.description.substring()}</span></p>
     <button class="read-more">Read more</button> `; // substring extracts characters from start to end
 
   const readMoreButton = animals.querySelector(".read-more");
   readMoreButton.addEventListener("click", function () {  // Add an event listener to the "Read more" button
+
     const dots = animals.querySelector(".dots");
     const moreText = animals.querySelector(".more");
+    const btnText = document.querySelector(".read-more")
 
-    if (moreText.classList.contains("hidden")) {// Shows text
-      moreText.classList.remove("hidden");
-      dots.style.display = "none";
-      readMoreButton.textContent = "Read less";
-    } else {
-      moreText.classList.add("hidden"); // Hide extra words
+    if (dots.style.display === "none") {
       dots.style.display = "inline";
-      readMoreButton.textContent = "Read more";
+      btnText.innerHTML = "Read more";
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Read less";
+      moreText.style.display = "inline";
     }
   });
 }
-
 
 getAllAnimals();
 

@@ -342,6 +342,9 @@ main {
     padding: 20px;
     background-color: black;
 }
+ .more {
+    display: none;
+ }
 
 h2 {
     color: antiquewhite;
@@ -364,14 +367,6 @@ footer {
     display: flex;
     flex-direction: column;
 }
-
-.container {
-    border: 1px solid var(--line-color);
-    border-radius: 1rem;
-    margin-bottom: 20px;
-    padding: 8px;
-}
-
 
 @media screen and (max-width:768px) {
     body {
