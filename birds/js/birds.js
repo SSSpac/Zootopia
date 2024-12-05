@@ -48,46 +48,46 @@ let yellowTailedBlackCockatoo = new Animals(
 
 let animals = [cassowary, kookaburra, yellowTailedBlackCockatoo];
 
+let birdInfoDisplayed = false;
+
 const button = document.querySelector('.menu li:nth-child(4) a');
 button.addEventListener("click", (event) => {
     event.preventDefault();
 
     const container = document.getElementById('bird-info-container');
-    container.innerHTML = '<h2>Hi and Welcome to the Birds page, we have three different birds here at the Zoo, to find more information about them, click on the button on the left side in the sidebar, to find out more!</h2>';
 
-    const viewBirdsButton = document.createElement('button');
-    viewBirdsButton.textContent = "View Birds";
-    container.appendChild(viewBirdsButton);
-
-    viewBirdsButton.addEventListener("click", () => {
-        displayBirdInfo();
-    });
+    if (!birdInfoDisplayed) {
+        container.innerHTML = '<h2>Hi and Welcome to the Birds page, we have three different birds here at the Zoo. To find more information about them, click on the button on the left side in the sidebar, to find out more!</h2>';
+        birdInfoDisplayed = true;
+    }
 });
 
-function displayBirdInfo() {
+function displaySpecificBirdInfo(birdName) {
     const container = document.getElementById('bird-info-container');
-    container.innerHTML = '';
+    container.innerHTML = ''; 
 
-    animals.forEach(animal => {
+    const bird = animals.find(animal => animal.name === birdName);
+
+    if (bird) {
         const animalInfo = document.createElement('div');
         animalInfo.classList.add('animal-info');
         animalInfo.innerHTML = `
-            <h3>${animal.name}</h3>
-            <img src="${animal.image}" alt="${animal.name}" class="animal-image">
-            <p><strong>Lifespan:</strong> ${animal.lifespan} years</p>
-            <p><strong>Group:</strong> ${animal.group}</p>
-            <p><strong>Food:</strong> ${animal.food}</p>
+            <h3>${bird.name}</h3>
+            <img src="${bird.image}" alt="${bird.name}" class="animal-image">
+            <p><strong>Lifespan:</strong> ${bird.lifespan} years</p>
+            <p><strong>Group:</strong> ${bird.group}</p>
+            <p><strong>Food:</strong> ${bird.food}</p>
             <p><strong>Description:</strong>
-                <span id="dots">${animal.description.substring(0, 150)}...</span>
-                <span id="more" style="display:none;">${animal.description}</span>
+                <span id="dots">${bird.description.substring(0, 150)}...</span>
+                <span id="more" style="display:none;">${bird.description}</span>
             </p>
             <button class="read-more" onclick="myFunction(this)">Read more</button>
-            <p><strong>Length:</strong> ${animal.length} meters</p>
-            <p><strong>Weight:</strong> ${animal.weight} kg</p>
-            <p><strong>Found in:</strong> ${animal.found}</p>
+            <p><strong>Length:</strong> ${bird.length} meters</p>
+            <p><strong>Weight:</strong> ${bird.weight} kg</p>
+            <p><strong>Found in:</strong> ${bird.found}</p>
         `;
         container.appendChild(animalInfo);
-    });
+    }
 }
 
 function myFunction(button) {
@@ -105,6 +105,19 @@ function myFunction(button) {
         moreText.style.display = "inline";
     }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const animalButtons = document.querySelectorAll('.animal-button');
+    
+    animalButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault();
+            
+            const animalName = button.getAttribute('data-animal');
+            displaySpecificBirdInfo(animalName);
+        });
+    });
+});
 
 const sidebar = document.getElementById('sidebar')
 
