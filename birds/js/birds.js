@@ -15,7 +15,7 @@ let cassowary = new Animals(
     20,
     "birds",
     "Plants matter like fruit, insects, and small animals like mice and lizards",
-    "It’s not hard to imagine that cassowaries are descended from dinosaur ancestors. The largest cassowaries can stand as high as six feet and weigh up to 160 pounds. These large birds cannot fly, but their extremely powerful legs propel them at great speeds. They are strong swimmers and can move quickly on both land and water. Cassowaries are shy and they are usually hard to spot, at least in their natural rainforest habitats. They are not overly aggressive, and attacks are rare. But they can do a lot of damage if they are provoked or angered. Cassowary attacks have occasionally been deadly, including a recent one which occurred in 2019, at a private collection of caged birds in Florida",
+    "It’s not hard to imagine that cassowaries are descended from dinosaur ancestors. The largest cassowaries can stand as high as six feet and weigh up to 160 pounds. These large birds cannot fly, but their extremely powerful legs propel them at great speeds. They are strong swimmers and can move quickly on both land and water. Cassowaries are shy and they are usually hard to spot, at least in their natural rainforest habitats. They are not overly aggressive, and attacks are rare. But they can do a lot of damage if they are provoked or angered. Cassowary attacks have occasionally been deadly, including a recent one which occurred in 2019, at a private collection of caged birds in Florida.",
     1.7,
     44,
     "Queensland",
@@ -47,22 +47,6 @@ let yellowTailedBlackCockatoo = new Animals(
 );
 
 let animals = [cassowary, kookaburra, yellowTailedBlackCockatoo];
-let birdInfoDisplayed = false;
-
-const button = document.querySelector('.menu li:nth-child(4) a');
-button.addEventListener("click", (event) => {
-    event.preventDefault();
-
-    const container = document.getElementById('bird-info-container');
-    const homeMessage = document.getElementById('home-message');
-
-    homeMessage.style.display = 'block';
-
-    if (!birdInfoDisplayed) {
-        container.innerHTML = '<h2>Hi and Welcome to the Birds page, we have three different birds here at the Zoo. To find more information about them, click on the button on the left side in the sidebar, to find out more!</h2>';
-        birdInfoDisplayed = true;
-    }
-});
 
 function displaySpecificBirdInfo(birdName) {
     const container = document.getElementById('main-content');
@@ -112,23 +96,34 @@ function myFunction(button) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    const animalButtons = document.querySelectorAll('.animal-button');
-    
-    animalButtons.forEach(button => {
-        button.addEventListener('click', (event) => {
+    const birdsButton = document.getElementById('birds-button');
+    const container = document.getElementById('bird-info-container');
+
+    if (birdsButton && container) {
+        birdsButton.addEventListener('click', function(event) {
             event.preventDefault();
-            
-            const animalName = button.getAttribute('data-animal');
-            
-            displaySpecificBirdInfo(animalName);
+
+            container.innerHTML = `
+                <h2>Hi and Welcome to the Birds page!</h2>
+                <p>We have three different birds here at the Zoo. To find more information about them, click on the button on the left side in the sidebar to find out more!</p>
+            `;
         });
+    }
+});
+
+const sidebarButtons = document.querySelectorAll('.animal-button');
+sidebarButtons.forEach(button => {
+    button.addEventListener('click', (event) => {
+        const birdName = event.target.getAttribute('data-animal');
+        displaySpecificBirdInfo(birdName);
     });
 });
 
 const sidebar = document.getElementById('sidebar');
+const toggleButton = document.getElementById('toggle-sidebar-btn');
 
 function toggleSidebar() {
-    sidebar.classList.toggle('close'); 
+    sidebar.classList.toggle('close');
     toggleButton.classList.toggle('rotate');
     closeAllSubMenus();
 }
@@ -153,3 +148,6 @@ function closeAllSubMenus() {
         ul.previousElementSibling.classList.remove('rotate');
     });
 }
+
+toggleButton.addEventListener('click', toggleSidebar);
+
