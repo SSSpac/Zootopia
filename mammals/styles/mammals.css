@@ -12,12 +12,13 @@
 }
 
 html {
+    height: 100vh;
     font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5rem;
 }
 
 body {
-    min-height: 100vh;
+    min-height: 100%;
     background-color: var(--base-color);
     color: var(--text-color);
 }
@@ -30,6 +31,10 @@ body {
 
 .page-title {
     color: var(--accent-color);
+}
+
+.nav {
+    padding: 8px;
 }
 
 .sidebar {
@@ -52,11 +57,11 @@ body {
 
 .main-content {
     display: flex;
-    gap: 20px;
     padding: 20px;
 }
 
 main {
+    border: 1px solid var(--line-color);
     padding: 16px;
     width: 100%;
 }
@@ -90,12 +95,14 @@ main p {
 footer {
     display: flex;
     flex-direction: column;
+  
 }
 
 @media screen and (max-width:768px) {
     body {
         grid-template-columns: 1fr;
     }
+
 
     main {
         padding: 2em 1em 60px 1em;
