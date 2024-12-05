@@ -120,6 +120,10 @@ footer {
     padding: 10px;
 }
 
+.bottom-bar {
+    margin-top: 0;
+}
+
 @media screen and (max-width:768px) {
     body {
         grid-template-columns: 1fr;
@@ -127,6 +131,7 @@ footer {
 
     main {
         padding: 16px;
+        margin-top: 10%;
     }
 
     .logo {
@@ -134,29 +139,28 @@ footer {
     }
 
     .container {
-        display: flow;
-        border: none;
+        display: flex;
+        flex-direction: row-reverse;
         padding: 0;
     }
 
     .sidebar {
-        width: 100%;
-        border-right: none;
-        border-top: 1px solid var(--line-color);
-        padding: 0;
-        position: fixed;
-        top: unset;
-        bottom: 0;
+        width: 50%;
+        padding: 8px;
+        position: absolute;
+        top: 110px;
+        bottom: unset;
+        background-color:unset;
     }
 
     .sidebar li {
         color: bisque;
-        padding: 5px;
+        padding: 10px;
         cursor: pointer;
+        border-radius: 10px;
         list-style-type: none;
         font-size: 1rem;
         transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    
     }
 
     .nav {
@@ -167,11 +171,35 @@ footer {
         padding: 10px;
     }
 
-    .bottom-bar {
-        display: none;
+    .animal_names {
+        display: inline-flex;
+        gap: 15px;
     }
 
-    footer p {
-        display: none;
+    footer {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        bottom: 0;
+    }
+
+    .class {
+        display: contents;
+        position: relative;
+    }
+}
+
+@media screen and (max-width:630px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        width: 95%;
+        margin: 10px;
+        border: 2px solid var(--line-color);
+    }
+
+    .sidebar {
+        top: 90px;
     }
 }
