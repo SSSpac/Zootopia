@@ -64,7 +64,7 @@ function displaySpecificBirdInfo(birdName) {
             <p><strong>Group:</strong> ${bird.group}</p>
             <p><strong>Food:</strong> ${bird.food}</p>
             <p><strong>Description:</strong>
-                <span id="dots">${bird.description.substring(0, 150)}...</span>
+                <span id="dots">${bird.description.substring(0, 200)}...</span>
                 <span id="more" style="display:none;">${bird.description}</span>
             </p>
             <button class="read-more" onclick="myFunction(this)">Read more</button>
@@ -73,9 +73,6 @@ function displaySpecificBirdInfo(birdName) {
             <p><strong>Found in:</strong> ${bird.found}</p>
         `;
         container.appendChild(animalInfo);
-
-        const homeMessage = document.getElementById('home-message');
-        homeMessage.style.display = 'none';
     }
 }
 
@@ -95,21 +92,38 @@ function myFunction(button) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    const birdsButton = document.getElementById('birds-button');
-    const container = document.getElementById('bird-info-container');
-
-    if (birdsButton && container) {
-        birdsButton.addEventListener('click', function(event) {
-            event.preventDefault();
-
-            container.innerHTML = `
-                <h2>Hi and Welcome to the Birds page!</h2>
-                <p>We have three different birds here at the Zoo. To find more information about them, click on the button on the left side in the sidebar to find out more!</p>
-            `;
-        });
+const onClick = {
+    lastClicked: null,
+    showWelcomeMsg: false,
+  };
+  
+    const showBirdsWelcomeMessage = () => {
+    const container = document.getElementById("bird-info-container");
+  
+    if (onClick.lastClicked === "birds" && !onClick.showWelcomeMsg) {
+      container.innerHTML = `
+        <h2>Hi and Welcome to the Birds page!</h2>
+        <p>We have three different birds here at the Zoo. To find more information about them, click on the button on the left side in the sidebar to find out more!</p>
+      `;
+      onClick.showWelcomeMsg = true;
+    } else {
+      container.innerHTML = "";
+      onClick.showWelcomeMsg = false;
     }
-});
+  };
+  
+  document.addEventListener('DOMContentLoaded', function () {
+    const birdsButton = document.getElementById("birds-button");
+    
+    if (birdsButton) {
+      birdsButton.addEventListener("click", function (event) {
+        event.preventDefault();
+  
+        onClick.lastClicked = "birds";
+        showBirdsWelcomeMessage();
+      });
+    }
+  });
 
 const sidebarButtons = document.querySelectorAll('.animal-button');
 sidebarButtons.forEach(button => {
