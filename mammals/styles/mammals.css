@@ -14,7 +14,6 @@
 html {
     height: 100vh;
     font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.5rem;
 }
 
 body {
@@ -24,17 +23,25 @@ body {
 }
 
 .logo {
-    width: 90px;
-    ;
+    width: 80px;
     height: auto;
+    left: 0;
+    margin: 0;
+    position: absolute;
+}
+
+.header {
+    background-color: darkseagreen;
+    display: grid;
 }
 
 .page-title {
     color: var(--accent-color);
-}
-
-.nav {
-    padding: 8px;
+    display: flex;
+    justify-content: space-evenly;
+    color: #353535;
+    font-size: 2rem;
+    margin: 0;
 }
 
 .sidebar {
@@ -42,7 +49,6 @@ body {
     width: 300px;
     padding: 32px;
     background-color: var(--base-color);
-    border-right: 1px solid var(--line-color);
 }
 
 .sidebar li {
@@ -55,6 +61,11 @@ body {
 
 }
 
+.btn {
+    position: relative;
+    left: 140px;
+}
+
 .main-content {
     display: flex;
     padding: 20px;
@@ -62,8 +73,16 @@ body {
 
 main {
     border: 1px solid var(--line-color);
+    box-shadow: 3px 3px 40px forestgreen;
     padding: 16px;
     width: 100%;
+    margin: 16px;
+    border-radius: 20px;
+}
+
+.content {
+    color: #b0b3c1;
+    text-align: center;
 }
 
 .read-more {
@@ -71,18 +90,14 @@ main {
     padding: 20px;
     background-color: black;
 }
- .more {
+
+.more {
     display: none;
- }
+}
 
 h2 {
     color: antiquewhite;
     text-align: center;
-}
-
-.animal_name {
-    color: #b0b3c1;
-    text-align: left;
 }
 
 main p {
@@ -95,7 +110,14 @@ main p {
 footer {
     display: flex;
     flex-direction: column;
-  
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
 }
 
 @media screen and (max-width:768px) {
@@ -103,18 +125,21 @@ footer {
         grid-template-columns: 1fr;
     }
 
-
     main {
-        padding: 2em 1em 60px 1em;
+        padding: 16px;
+    }
+
+    .logo {
+        width: 55px;
     }
 
     .container {
+        display: flow;
         border: none;
         padding: 0;
     }
 
     .sidebar {
-        height: 60px;
         width: 100%;
         border-right: none;
         border-top: 1px solid var(--line-color);
@@ -122,6 +147,31 @@ footer {
         position: fixed;
         top: unset;
         bottom: 0;
-
-        }
     }
+
+    .sidebar li {
+        color: bisque;
+        padding: 5px;
+        cursor: pointer;
+        list-style-type: none;
+        font-size: 1rem;
+        transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    
+    }
+
+    .nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(0, 0, 0);
+        padding: 10px;
+    }
+
+    .bottom-bar {
+        display: none;
+    }
+
+    footer p {
+        display: none;
+    }
+}
