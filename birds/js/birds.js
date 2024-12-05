@@ -47,7 +47,6 @@ let yellowTailedBlackCockatoo = new Animals(
 );
 
 let animals = [cassowary, kookaburra, yellowTailedBlackCockatoo];
-
 let birdInfoDisplayed = false;
 
 const button = document.querySelector('.menu li:nth-child(4) a');
@@ -55,6 +54,9 @@ button.addEventListener("click", (event) => {
     event.preventDefault();
 
     const container = document.getElementById('bird-info-container');
+    const homeMessage = document.getElementById('home-message');
+
+    homeMessage.style.display = 'block';
 
     if (!birdInfoDisplayed) {
         container.innerHTML = '<h2>Hi and Welcome to the Birds page, we have three different birds here at the Zoo. To find more information about them, click on the button on the left side in the sidebar, to find out more!</h2>';
@@ -63,8 +65,8 @@ button.addEventListener("click", (event) => {
 });
 
 function displaySpecificBirdInfo(birdName) {
-    const container = document.getElementById('bird-info-container');
-    container.innerHTML = ''; 
+    const container = document.getElementById('main-content');
+    container.innerHTML = '';
 
     const bird = animals.find(animal => animal.name === birdName);
 
@@ -87,6 +89,9 @@ function displaySpecificBirdInfo(birdName) {
             <p><strong>Found in:</strong> ${bird.found}</p>
         `;
         container.appendChild(animalInfo);
+
+        const homeMessage = document.getElementById('home-message');
+        homeMessage.style.display = 'none';
     }
 }
 
@@ -114,38 +119,37 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
             
             const animalName = button.getAttribute('data-animal');
+            
             displaySpecificBirdInfo(animalName);
         });
     });
 });
 
-const sidebar = document.getElementById('sidebar')
+const sidebar = document.getElementById('sidebar');
 
-function toggleSidebar(){
-  sidebar.classList.toggle('close') 
-  toggleButton.classList.toggle('rotate')
-
-  closeAllSubMenus()
+function toggleSidebar() {
+    sidebar.classList.toggle('close'); 
+    toggleButton.classList.toggle('rotate');
+    closeAllSubMenus();
 }
 
-function toggleSubMenu(button){
+function toggleSubMenu(button) {
+    if (!button.nextElementSibling.classList.contains('show')) {
+        closeAllSubMenus();
+    }
 
-  if(!button.nextElementSibling.classList.contains('show')){
-    closeAllSubMenus()
-  }
+    button.nextElementSibling.classList.toggle('show');
+    button.classList.toggle('rotate');
 
-  button.nextElementSibling.classList.toggle('show')
-  button.classList.toggle('rotate')
-
-  if(sidebar.classList.contains('close')){
-    sidebar.classList.toggle('close')
-    toggleButton.classList.toggle('rotate')
-  }
+    if (sidebar.classList.contains('close')) {
+        sidebar.classList.toggle('close');
+        toggleButton.classList.toggle('rotate');
+    }
 }
 
-function closeAllSubMenus(){
-  Array.from(sidebar.getElementsByClassName('show')).forEach(ul => {
-    ul.classList.remove('show')
-    ul.previousElementSibling.classList.remove('rotate')
-  })
+function closeAllSubMenus() {
+    Array.from(sidebar.getElementsByClassName('show')).forEach(ul => {
+        ul.classList.remove('show');
+        ul.previousElementSibling.classList.remove('rotate');
+    });
 }

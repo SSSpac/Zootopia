@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,105 +25,75 @@
                 <li><a href="./index.html" class="active">Home</a></li>
                 <li><a href="./mammals/mammals.html">Mammals</a></li>
                 <li><a href="#">Reptiles</a></li>
-                <li><a href="#"id="birds-button">Birds</a></li>
+                <li><a href="#" id="birds-button">Birds</a></li>
             </ul>
             <a class="btn" href="./our-team.html">About us</a>
-            
-            <span class="nav__bar">
-                <nav>
-                    <ul class="top__menu">
-                        <li>
-                            <input type="checkbox" id="menu-toggle" class="menu-toggle">
-                                <label for="menu-toggle" class="menu-icon">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </label>
-                            <ul class="sub__menu">
-                                <li>
-                                    <a href="./index.html">Home</a>
-                                </li>
-            
-                                <li>
-                                    <a href="#">Mammals</a>
-                                </li>
-            
-                                <li>
-                                    <a href="#">Reptiles</a>
-                                </li>
-            
-                                <li>
-                                    <a href="#">Birds</a>
-                                </li>
-    
-                                <li>
-                                    <a href="./our-team.html">About us</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </span>
         </nav>
     </header>
-        <section class="main-content">
-            <div id="bird-info-container"></div>
-        </section>
-        <div class="content">
-            <nav id="sidebar">
-                  <button onclick=toggleSubMenu(this) class="dropdown-btn">
-                    <span>Animals</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z"/></svg>
-                  </button>
-                  <ul class="sub-menu">
-                    <div>
-                        <li><a href="#" class="animal-button" data-animal="Cassowary">Cassowary</a></li>
-                        <li><a href="#" class="animal-button" data-animal="Kookaburra">Kookaburra</a></li>
-                        <li><a href="#" class="animal-button" data-animal="Yellow Tailed Black Cockatoo">Yellow-tailed Black Cockatoo</a></li>
-                    </div>
-                </ul>
-            </nav>
+
+    <section class="main-content">
+        <div id="bird-info-container"></div>
+    </section>
+
+    <div class="content">
+        <nav id="sidebar">
+            <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+                <span>Animals</span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                    <path d="M480-361q-8 0-15-2.5t-13-8.5L268-556q-11-11-11-28t11-28q11-11 28-11t28 11l156 156 156-156q11-11 28-11t28 11q11 11 11 28t-11 28L508-372q-6 6-13 8.5t-15 2.5Z"/>
+                </svg>
+            </button>
+            <ul class="sub-menu">
+                <div>
+                    <li><a href="#" class="animal-button" data-animal="Cassowary">Cassowary</a></li>
+                    <li><a href="#" class="animal-button" data-animal="Kookaburra">Kookaburra</a></li>
+                    <li><a href="#" class="animal-button" data-animal="Yellow Tailed Black Cockatoo">Yellow-tailed Black Cockatoo</a></li>
+                </div>
+            </ul>
+        </nav>
+
         <main>
-        <h2>Hello!</h2>
-      <div class="container" id="main-content">
-        <p> G'day and welcome to our site showcasing the incredible wildlife of Australia! Prepare to be amazed by the stunning images and  about somme of the most unique and diverse creatures on this planet. From odd birds to feisty Tasmanian Devils, we've got it all covered here. Whether you're a nature enthusiast looking to learn more about Aussie animals or just stopping by for a virtual safari, we promise you'll be thoroughly entertained. So sit back, relax, 
-          and enjoy exploring the wonders of Down Under through our collection of photos and fun facts. And who knows, maybe you'll even discover your new favorite animal along the way! Cheers mate!</p>
-        <img src="./images/kangaroo.jpg" width="60%" height="auto"> 
+            <div class="container" id="main-content">
+                <div id="home-message">
+                    <h2>Hello</h2>
+                    <p>G'day and welcome to our site showcasing the incredible wildlife of Australia! Prepare to be amazed by the stunning images and about some of the most unique and diverse creatures on this planet. From odd birds to feisty Tasmanian Devils, we've got it all covered here. Whether you're a nature enthusiast looking to learn more about Aussie animals or just stopping by for a virtual safari, we promise you'll be thoroughly entertained. So sit back, relax, and enjoy exploring the wonders of Down Under through our collection of photos and fun facts. And who knows, maybe you'll even discover your new favorite animal along the way! Cheers mate!</p>
+                    <img src="../images/kangaroo.jpg" width="60%" height="auto">
+                </div>
+            </div>
         </main>
-      </div>
-</body>
-
-<footer>
-    <div class="container">
-       <div class="footer-content"></div>
-       <ul class="info">
-       <h3>Contact us</h3>
-       <p>Email:info@cmeducations.se</p>
-       <p>Hammarby Fabriksväg 61
-        <p> 120 30 Stockholm </p>
-       <p> +46(0)8 33 60 15</p>
-       
-    </ul>
-       <div class="footer-content"></div>
-       <ul class="list">
-        <li><a href="Home.index">Home</a></li>
-        <li><a href="reptiles.html">Reptiles</a></li>
-        <li><a href="Mammals.html">Mammals</a></li>
-        <li><a href="Bird.html">Birds</a></li>
-       </ul>
-       <div class="footer-content">
-        <h3>Follows us</h3>
-        <ul class="social-icons">
-        <li><a href="https://cmeducations.se/"><i class="fab fa-facebook"></i></a></li>
-        <li><a href="https://www.youtube.com/watch?v=JxS5E-kZc2s"><i class="fab fa-twitter"></i></a></li>
-        <li><a href="https://www.instagram.com/futuregamesedu/"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="https://github.com/SSSpac/Australia-zoo-7"><i class="fab fa-linkedin"></i></a></li>
-       </ul>
-       </div>
     </div>
-<div class="bottom-bar"></div>
-<p>&copy;2024 Changemaker Educations</p>
-</footer>
 
+    <footer>
+        <div class="container">
+            <div class="footer-content"></div>
+            <ul class="info">
+                <h3>Contact us</h3>
+                <p>Email:info@cmeducations.se</p>
+                <p>Hammarby Fabriksväg 61</p>
+                <p>120 30 Stockholm</p>
+                <p>+46(0)8 33 60 15</p>
+            </ul>
+            <div class="footer-content"></div>
+            <ul class="list">
+                <li><a href="Home.index">Home</a></li>
+                <li><a href="reptiles.html">Reptiles</a></li>
+                <li><a href="Mammals.html">Mammals</a></li>
+                <li><a href="Bird.html">Birds</a></li>
+            </ul>
+            <div class="footer-content">
+                <h3>Follow us</h3>
+                <ul class="social-icons">
+                    <li><a href="https://cmeducations.se/"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.youtube.com/watch?v=JxS5E-kZc2s"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/futuregamesedu/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://github.com/SSSpac/Australia-zoo-7"><i class="fab fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-bar"></div>
+        <p>&copy;2024 Changemaker Educations</p>
+    </footer>
+
+    <script src="./js/birds.js"></script>
 </body>
 </html>
