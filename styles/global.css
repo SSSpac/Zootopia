@@ -23,6 +23,7 @@ html {
 body {
     width: auto;
     margin: 0;
+        overflow-x: hidden;
     min-height: 100vh;
     background-color: var(--base-color);
     color: var(--text-color);
@@ -70,6 +71,8 @@ body {
     border-radius: 8px;
     font-family: 'Times New Roman', Times, serif;
     display: none;
+    max-width: 90%;
+
 }
 
 .popup button {
@@ -511,8 +514,8 @@ h3 {
 }
 
 .list li {
-    padding: 5px;
-    margin: 0 210px;
+    padding: 5px; 
+    margin: 0 auto;
 }
 
 .list i {
