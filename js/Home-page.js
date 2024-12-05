@@ -22,7 +22,7 @@ animalLinks.forEach(animal => {
     updateContent(animal.dataAnimal);
   });
 
-  sidebar.appendChild(link);
+  side__bar.appendChild(link);
 });
 
 const animals = {
@@ -118,18 +118,26 @@ function updateContent(animal) {
     clickCount[animal] = 0;
     return;
   }
-
   const selectedAnimal = animals[animal];
+  let groupLink = ""; // Variable to store the group-specific link
+  
+  // Determine the appropriate link based on the group
+  if (selectedAnimal.Group === "Mammals") {
+    groupLink = "mammals.html";
+  } else if (selectedAnimal.Group === "Reptiles") {
+    groupLink = "reptiles.html";
+  } else if (selectedAnimal.Group === "Birds") {
+    groupLink = "test.html";
+  }
+  
+  // Update the content
   contentContainer.innerHTML = `
     <h2>${selectedAnimal.Name}</h2>
     <img src="${selectedAnimal.Image}" alt="${selectedAnimal.Name}" style="width:400px;height:auto;">
     <p>${selectedAnimal.Information}</p>
     <p><strong>Food:</strong> ${selectedAnimal.Food}</p>
     <p><strong>Lifespan:</strong> ${selectedAnimal.Lifespan}</p>
-    <a href="reptiles.html" style="margin-top: 10px; display: inline-block; padding: 10px; background-color: grey; color: white; text-decoration: none; border-radius: 5px;">
-  
-    Group: ${selectedAnimal.Group}
+    <a href="${groupLink}" style="margin-top: 10px; display: inline-block; padding: 10px; background-color: grey; color: white; text-decoration: none; border-radius: 5px;">
+      Group: ${selectedAnimal.Group}
     </a>
-    
-  `;
-}
+  `; }
