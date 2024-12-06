@@ -5,7 +5,10 @@
   font-family: Arial, Helvetica, sans-serif;
   max-width: 120rem;
   margin: 8rem auto;
-  border: 2px solid rgb(120, 115, 115);
+  border: 1px solid rgb(96, 138, 97);
+  -webkit-box-shadow: 0 0 10px #fff;
+  box-shadow: 0 0 10px #fff;
+
 }
 
 .sidebar {
@@ -13,8 +16,7 @@
   font-weight: bold;
   padding-top: 50px;
   font-style: normal;
-  margin: 16px;
-
+  border: 1px solid rgb(228, 234, 228);
 }
 
 .main {
@@ -26,7 +28,7 @@
 /* Read more  */
 .hidden {
   display: none;
-
+  
 }
 
 /* image css */
@@ -35,9 +37,21 @@
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+
 }
 
 .animal_name {
   text-align: center;
-  margin-top: 24px;
+  padding: 20px;
+ 
 }
+
+.description {
+  text-align: center;
+  
+}
+
+.message{
+  text-align: center;
+}
+

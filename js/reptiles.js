@@ -16,7 +16,9 @@ function Animal(image, name, group, lifespan, weight, food, length, found, descr
   let perentie = new Animal("./images/perentie.jpg", "Perentie", "Reptile", "20 years", "2.5cm", "Carnivore, they eat animals like kangaroos, rabbits, lizards and birds", "20kg", "Desserts", "The perentie (Varanus giganteus) is the largest monitor lizard or goanna native to Australia. It is one of the largest living lizards on earth, after the Komodo dragon, Asian water monitor, crocodile monitor, and intersecting by size with Nile monitor.[3] Found west of the Great Dividing Range in the arid areas of Australia, it is rarely seen, because of its shyness and the remoteness of much of its range from human habitation. The species is considered to be a least-concern species according to the International Union for Conservation of Nature. Its status in many Aboriginal cultures is evident in the totemic relationships, and part of the Ngiṉṯaka dreaming, as well as bush tucker. It was a favoured food item among desert Aboriginal tribes, and the fat was used for medicinal and ceremonial purposes.Perenties are the largest living species of lizard in Australia. Perenties can grow to lengths of 2.5 m (8 ft 2 in) and weigh up to 20 kg (44 lb), possibly up to 3 m (9 ft 10 in) and 40 kg (88 lb), making it the fourth-largest extant species of lizard (exceeded in size only by the Komodo dragon, Asian water monitor and crocodile monitor).[7][8][9] However, perenties are very lean among large monitors, making it significantly less bulky than the rock monitor at a similar size.Perenties generally avoid human contact and often retreat before they are seen. Being able diggers, they can excavate a burrow for shelter in only minutes. Their long claws enable them to climb trees easily. They often stand on their back legs and tails to gain a better view of the surrounding terrain.");
   
   let animals = [frilledNeckLizard, hawksbillTurtle, perentie,];
-  
+  welcomeMsg = `<h2 class="message">Embark on a Reptilian Adventure!</h2>
+      <p>Welcome, intrepid explorer! From the deserts to the rainforests, reptiles inhabit some of the most extreme and beautiful places on Earth. Let’s dive into their world and uncover the secrets of their survival.</p>`
+
   const getAllAnimals = () => {
     animals.forEach(e => {
       const animal_info = document.querySelector(".animal_names");
@@ -35,8 +37,7 @@ function Animal(image, name, group, lifespan, weight, food, length, found, descr
   
   
     if(onClick.lastClicked === animalName && !onClick.showWelcomeMsg){
-      animalInfo.innerHTML = `<h2>Embark on a Reptilian Adventure!</h2>
-      <p>Welcome, intrepid explorer! From the deserts to the rainforests, reptiles inhabit some of the most extreme and beautiful places on Earth. Let’s dive into their world and uncover the secrets of their survival.</p>`
+      animalInfo.innerHTML =welcomeMsg;
       onClick.showWelcomeMsg = true;
     }else{
     animalInfo.innerHTML = ` 
@@ -46,11 +47,11 @@ function Animal(image, name, group, lifespan, weight, food, length, found, descr
       <span class="dots">...</span>
       <span class="more hidden">${animal.description.substring(200)}</span></p>
       <button class="read-more">Read more</button> 
-      <p><strong>Group:</strong> ${animal.group}</p>
-      <p><strong>Lifespan:</strong> ${animal.lifespan}</p>
-      <p><strong>Weight:</strong> ${animal.weight}</p>
-      <p><strong>Found:</strong> ${animal.found}</p>
-      <p><strong>Food:</strong> ${animal.food}</p>`;
+      <p class="description"><strong>Group:</strong> ${animal.group}</p>
+      <p class="description"><strong>Lifespan:</strong> ${animal.lifespan}</p>
+      <p class="description"><strong>Weight:</strong> ${animal.weight}</p>
+      <p class="description"><strong>Found:</strong> ${animal.found}</p>
+      <p class="description"><strong>Food:</strong> ${animal.food}</p>`;
 
     // Add an event listener to the "Read more" button
     const readMoreButton = animalInfo.querySelector(".read-more");
@@ -88,6 +89,7 @@ function Animal(image, name, group, lifespan, weight, food, length, found, descr
     )
   })
   
+
   
   // This function returns animal data 
   
@@ -96,6 +98,11 @@ function Animal(image, name, group, lifespan, weight, food, length, found, descr
     return animals.find(o => o.name === animal) || null; 
   }
   
+  document.addEventListener('DOMContentLoaded', () => {
+    const animalInfo = document.getElementById("content");
+    animalInfo.innerHTML = welcomeMsg;
+    onClick.showWelcomeMsg = true;
+});
   
   
   
