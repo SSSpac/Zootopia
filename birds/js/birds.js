@@ -93,44 +93,44 @@ function myFunction(button) {
 }
 
 const onClick = {
-    lastClicked: null,
-    showWelcomeMsg: false,
+    birdsClicked: false,
   };
   
-    const showBirdsWelcomeMessage = () => {
-    const container = document.getElementById("bird-info-container");
+  const showBirdsWelcomeMessage = () => {
+    const welcomeMessageContainer = document.getElementById("home-message");
   
-    if (onClick.lastClicked === "birds" && !onClick.showWelcomeMsg) {
-      container.innerHTML = `
+    if (!onClick.birdsClicked) {
+      welcomeMessageContainer.innerHTML = `
         <h2>Hi and Welcome to the Birds page!</h2>
         <p>We have three different birds here at the Zoo. To find more information about them, click on the button on the left side in the sidebar to find out more!</p>
       `;
-      onClick.showWelcomeMsg = true;
+      onClick.birdsClicked = true;
     } else {
-      container.innerHTML = "";
-      onClick.showWelcomeMsg = false;
+      welcomeMessageContainer.innerHTML = "";
     }
   };
+
+  const birdsButton = document.getElementById("birds-button");
+  birdsButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    showBirdsWelcomeMessage();
+  });
   
-  document.addEventListener('DOMContentLoaded', function () {
-    const birdsButton = document.getElementById("birds-button");
-    
-    if (birdsButton) {
-      birdsButton.addEventListener("click", function (event) {
-        event.preventDefault();
-  
-        onClick.lastClicked = "birds";
-        showBirdsWelcomeMessage();
-      });
-    }
+  document.querySelectorAll('a:not(#birds-button)').forEach(link => {
+    link.addEventListener('click', () => {
+      const welcomeMessageContainer = document.getElementById("home-message");
+      welcomeMessageContainer.innerHTML = "";
+      onClick.birdsClicked = false;
+    });
   });
 
 const sidebarButtons = document.querySelectorAll('.animal-button');
 sidebarButtons.forEach(button => {
-    button.addEventListener('click', (event) => {
-        const birdName = event.target.getAttribute('data-animal');
-        displaySpecificBirdInfo(birdName);
-    });
+  button.addEventListener('click', (event) => {
+    const birdName = event.target.getAttribute('data-animal');
+    displaySpecificBirdInfo(birdName);
+    onClick.showWelcomeMsg = false;
+  });
 });
 
 const sidebar = document.getElementById('sidebar');
@@ -164,4 +164,3 @@ function closeAllSubMenus() {
 }
 
 toggleButton.addEventListener('click', toggleSidebar);
-
