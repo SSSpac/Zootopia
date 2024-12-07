@@ -92,7 +92,7 @@ const animals = {
   },
   YellowTailedBlackCockatoo: {
     Name: "Yellow Tailed Black Cockatoo",
-    Image: "images/yellow tailed black cockatoo.jpg",
+    Image: "images/yellowtailedblackcockatoo.jpg",
     Information: "Known for its yellow cheek patches and tail band, this cockatoo is a striking figure in the Australian wilderness.",
     Food: "Fruits, seeds, and plant material",
     Lifespan: "Around 41 years",
@@ -123,11 +123,11 @@ function updateContent(animal) {
   
   // Determine the appropriate link based on the group
   if (selectedAnimal.Group === "Mammals") {
-    groupLink = "mammals.html";
+    groupLink = "./mammals/mammals.html";
   } else if (selectedAnimal.Group === "Reptiles") {
     groupLink = "reptiles.html";
   } else if (selectedAnimal.Group === "Birds") {
-    groupLink = "test.html";
+    groupLink = "./birds/birds.html";
   }
   
   // Update the content
