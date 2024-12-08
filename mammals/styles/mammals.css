@@ -58,7 +58,6 @@ body {
     list-style-type: none;
     font-size: 1rem;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-
 }
 
 .btn {
@@ -150,7 +149,7 @@ footer {
         position: absolute;
         top: 110px;
         bottom: unset;
-        background-color:unset;
+        background-color: unset;
     }
 
     .sidebar li {
