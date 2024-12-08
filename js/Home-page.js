@@ -119,18 +119,16 @@ function updateContent(animal) {
     return;
   }
   const selectedAnimal = animals[animal];
-  let groupLink = ""; // Variable to store the group-specific link
+  let groupLink = ""; 
   
-  // Determine the appropriate link based on the group
   if (selectedAnimal.Group === "Mammals") {
     groupLink = "./mammals/mammals.html";
   } else if (selectedAnimal.Group === "Reptiles") {
-    groupLink = "reptiles.html";
+    groupLink = "./reptiles/reptiles.html";
   } else if (selectedAnimal.Group === "Birds") {
     groupLink = "./birds/birds.html";
   }
   
-  // Update the content
   contentContainer.innerHTML = `
     <h2>${selectedAnimal.Name}</h2>
     <img src="${selectedAnimal.Image}" alt="${selectedAnimal.Name}" style="width:400px;height:auto;">
