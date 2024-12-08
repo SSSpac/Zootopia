@@ -6,7 +6,6 @@ html {
 }
 
 * {
-	margin: 0px;
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
 }
@@ -31,11 +30,6 @@ a:hover  {
 
 aside, nav, footer, header, section, main {
 	display: block;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-    font-size: inherit;
-	font-weight: inherit;
 }
 
 ul, ul li {
