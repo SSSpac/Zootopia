@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --base-color: #11121a;
+    --line-color: #42434a;
+    --hover-color: #222533;
+    --text-color: #e6e6ef;
+    --accent-color: #5e63ff;
+    --secondary-text-color: #b0b3c1;
+}
+
+html {
+    height: 100vh;
+    font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100%;
+    background-color: var(--base-color);
+    color: var(--text-color);
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+    left: 0;
+    margin: 0;
+    position: absolute;
+}
+
+.header {
+    background-color: darkseagreen;
+    display: grid;
+}
+
+.page-title {
+    color: var(--accent-color);
+    display: flex;
+    justify-content: space-evenly;
+    color: #353535;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.sidebar {
+    font-weight: 600;
+    width: 300px;
+    padding: 32px;
+    background-color: var(--base-color);
+}
+
+.sidebar li {
+    color: bisque;
+    padding: 16px;
+    cursor: pointer;
+    list-style-type: none;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.btn {
+    position: relative;
+    left: 190px;
+}
+
+.main-content {
+    display: flex;
+    padding: 20px;
+}
+
+main {
+    border: 1px solid var(--line-color);
+    box-shadow: 3px 3px 40px forestgreen;
+    padding: 16px;
+    width: 100%;
+    margin: 16px;
+    border-radius: 20px;
+}
+
+.content {
+    color: #b0b3c1;
+    text-align: center;
+}
+
+.read-more {
+    border-radius: 16px;
+    padding: 20px;
+    background-color: black;
+}
+
+.more {
+    display: none;
+}
+
+h2 {
+    color: antiquewhite;
+    text-align: center;
+}
+
+main p {
+    color: var(--secondary-text-color);
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-top: 1rem
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-footer {
+    display: inline;
+    position: relative;
+    left: 215px;
+    padding: 16px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: none;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.list a.active {
+    background-color: var(--line-color);
+    color: #e6e6ef;
+    padding: 8px;
+    border-radius: 8px;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    font-size: 18px;
+}
+.list a.active:hover {
+    color: #008000;
+}
+
+
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+}
+
+.bottom-bar {
+    margin-top: 0;
+}
