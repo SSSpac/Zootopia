@@ -136,7 +136,10 @@ footer {
     color: #008000;
 }
 
-
+a, a:link, a:visited  {
+    text-decoration: none;
+    background-color: red;
+}
 
 .nav {
     display: flex;
