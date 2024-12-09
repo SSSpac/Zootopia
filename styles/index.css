@@ -23,6 +23,10 @@ body {
  
 }
 
+.footer {
+  padding: 200px;
+  font-size: 0.2rem;
+}
 .page-title {
   color: var(--accent-color);
 }
@@ -46,8 +50,10 @@ body {
   text-wrap: nowrap;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content:center;
+  cursor: pointer;
 }
+
 
 #sidebar.close {
   padding: 6px;
@@ -73,28 +79,31 @@ body {
   }
 }
 
-#sidebar a, #sidebar .dropdown-btn, #sidebar .logo {
-  border-radius: 5rem;
-  padding: 16px;
+.word {
+  color: rgb(46, 231, 87);
+  text-align: center;
+  margin-left: 18px;
+  border-radius: 2px;
+}
+.animal-button {
+  display: block;
+  padding: 2px;
+  text-align: center;
+  margin: 10px 0;
   text-decoration: none;
-  color: var(--text-color);
-  display: flex;
-  align-items: center;
-  gap: 1em;
+  color: rgb(141, 47, 47);
+  background-color: lightgray;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: all 0.5s ease;
 }
 
-.dropdown-btn {
-  width: 100%;
-  text-align: left;
-  background: none;
-  border: none;
-  font: inherit;
-  cursor: pointer;
-}
-
-#sidebar svg {
-  flex-shrink: 0;
-  fill: var(--text-color);
+.animal-button.active {
+  background-color: #007bff; 
+  color: white;
+  border:  solid #0056b3; 
+  font-weight: bold; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
 }
 
 #sidebar a span, #sidebar .dropdown-btn span {

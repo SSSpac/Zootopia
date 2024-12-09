@@ -452,16 +452,12 @@ footer {
 }
 
 footer {
-    padding-top: 10px;
+    padding-bottom: 10px;
+    
     width: 100%;
     color: white;
-    height: 50%;
 }
-.word {
-    color: rgb(8, 220, 54);
-    text-align: center;
-    margin-left: 33px;
-}
+
 .containers {
     width: 80%;
     margin: 50px;
@@ -480,6 +476,7 @@ footer {
 
 .footer-content {
     width: auto;
+    height: auto;
 }
 
 h3 {
