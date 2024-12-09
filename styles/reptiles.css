@@ -4,25 +4,30 @@
   font-size: 1.4rem;
   font-family: Arial, Helvetica, sans-serif;
   max-width: 120rem;
-  margin: 8rem auto;
-  border: 1px solid rgb(96, 138, 97);
-  -webkit-box-shadow: 0 0 10px #fff;
-  box-shadow: 0 0 10px #fff;
-
+  padding: 30px;
 }
 
 .sidebar {
+  list-style-type: none;
   flex: 0 0 25%;
   font-weight: bold;
-  padding-top: 50px;
+  padding: 16px;
   font-style: normal;
-  border: 1px solid rgb(228, 234, 228);
+}
+.sidebar li {
+  color: bisque;
+  padding: 16px;
+  cursor: pointer;
+  list-style-type: none;
+  font-size: 1rem;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .main {
   flex-grow: 1 0 auto;
   padding: 20px;
-
+  box-shadow: 3px 3px 40px forestgreen;
+  border-radius: 16px;
 }
 
 /* Read more  */

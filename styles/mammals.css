@@ -138,7 +138,10 @@ footer {
 
 a, a:link, a:visited  {
     text-decoration: none;
-    background-color: red;
+    background-color: rgb(164, 56, 56);
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 16px;
 }
 
 .nav {
