@@ -23,6 +23,10 @@ body {
  
 }
 
+.footer {
+  padding: 200px;
+  font-size: 0.2rem;
+}
 .page-title {
   color: var(--accent-color);
 }
