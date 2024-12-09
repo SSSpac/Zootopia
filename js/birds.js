@@ -110,25 +110,29 @@ const showBirdsWelcomeMessage = () => {
   }
 };
 
-const birdsButton = document.getElementById("birds-button");
-birdsButton.addEventListener("click", function (event) {
-  event.preventDefault();
-  showBirdsWelcomeMessage();
-});
+const menuLinks = document.querySelectorAll('.menu-item');
+menuLinks.forEach(link => {
+  link.addEventListener('click', function (event) {
+    menuLinks.forEach(item => {
+      item.classList.remove('active');
+    });
 
-document.querySelectorAll('a:not(#birds-button)').forEach(link => {
-  link.addEventListener('click', () => {
-    const welcomeMessageContainer = document.getElementById("home-message");
-    welcomeMessageContainer.innerHTML = "";
-    onClick.birdsClicked = false;
+    event.target.classList.add('active');
+    
+    if (event.target.textContent === "Birds") {
+      showBirdsWelcomeMessage();
+    }
   });
 });
 
 const sidebarButtons = document.querySelectorAll('.animal-button');
-  sidebarButtons.forEach(button => {
+sidebarButtons.forEach(button => {
   button.addEventListener('click', (event) => {
     const birdName = event.target.getAttribute('data-animal');
     displaySpecificBirdInfo(birdName);
-    onClick.showWelcomeMsg = false;
+
+    menuLinks.forEach(item => {
+      item.classList.remove('active');
+    });
   });
 });
