@@ -7,14 +7,13 @@
     --text-color: #e6e6ef;
     --accent-color: #5e63ff;
     --secondary-text-color: #b0b3c1;
-}
+  }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
 
 html {
     font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -23,25 +22,14 @@ html {
 body {
     width: auto;
     margin: 0;
-        overflow-x: hidden;
+    overflow-x: hidden;
     min-height: 100vh;
-    background-color: var(--base-color);
     color: var(--text-color);
 }
-
-/* .main-container {
-    max-width: 120rem;
-    margin: 8rem auto;
-    background-color: var(--grey-light-1);
-    box-shadow: var(--shadow-dark);
-    display: flex;
-    flex-direction: column;
-} */
 
 .header {
     background-color: darkseagreen;;
     text-align: center;
-
 }
 
 .page-title {
@@ -73,7 +61,6 @@ body {
     font-family: 'Times New Roman', Times, serif;
     display: none;
     max-width: 90%;
-
 }
 
 .popup button {
@@ -92,7 +79,6 @@ body {
     margin: 20px 0;
 }
  
-
 a {
     display: block;
     width: 100px;
@@ -101,10 +87,7 @@ a {
     text-align: center;
     text-decoration: none;
     padding: 5px 0; 
-    
-
 }
-
 
 /* nav css */
 .menu-toggle,
@@ -115,7 +98,6 @@ a {
 .nav-logo {
     position: left;
 }
-
 
 .bar-line {
     display: none;
@@ -140,11 +122,6 @@ a {
     margin-top: 46px;
 }
 
-.container {
-    margin-left: 120px;
-    margin-right: 120px;
-}
-
 .top__menu {
     display: flex;
     margin-right: 15px;
@@ -153,7 +130,6 @@ a {
 .nav__bar {
     display: none;
 }
-
 
 .nav {
     display: flex;
@@ -221,18 +197,14 @@ a.animal-button {
 }
 
 @media screen and (max-width: 1100px) {
-
-
     .img1 {
         margin-top: 30px;
     }
-
 
     .main-text h1 {
         font-size: 60px;
         padding-top: 60px;
     }
-
 
     .menu li {
         display: none;
@@ -246,20 +218,14 @@ a.animal-button {
         min-width: 100px;
     }
 
-
-
     .container {
         margin-left: 20px;
         margin-right: 20px;
     }
 
-
-
     .nav__bar {
         display: flex;
     }
-
-
 
     .nav__bar a {
         text-decoration: none;
@@ -375,14 +341,15 @@ ul li {
     list-style: none;
 }
 
-img {
-    vertical-align: top;
-}
-
 img,
 svg {
     max-width: 100%;
+    vertical-align: top;
+    border-radius: 200px;
+}
 
+img:hover {
+    opacity: 0.4;
 }
 
 address {
@@ -447,13 +414,7 @@ footer {
     font-size: 1rem;
     text-align: left;
     color: var(--secondary-text-color);
-}
-
-footer {
-    padding-bottom: 10px;
-    
     width: 100%;
-    color: white;
 }
 
 .containers {
@@ -467,7 +428,7 @@ footer {
 
 .container {
         border: 1px solid var(--line-color);
-        width: inherit;
+        width: 100%;
         margin: auto;
         display: flex;
         justify-content: center;

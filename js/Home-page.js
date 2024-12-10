@@ -52,7 +52,7 @@ function updateContent(animal) {
 const animals = {
   Echidna: {
     Name: "Echidna",
-    Image: "../images/echidna.jpg",
+    Image: "./images/echidna.jpg",
     Information: "Echidnas, also called spiny anteaters, are walking contradictions. They are mammals but lay eggs. They are often classified as long- or short-beaked but don't have beaks in the traditional sense; they have fleshy noses.",
     Food: "Insects, beetles, and worms",
     Lifespan: "Around 50 years",
@@ -60,7 +60,7 @@ const animals = {
   },
   TasmanianDevil: {
     Name: "Tasmanian Devil",
-    Image: "../images/tasmanian devil.jpg",
+    Image: "./images/tasmanian devil.jpg",
     Information: "The Tasmanian devil is a carnivorous marsupial of the family Dasyuridae, known for its loud screeches and strong jaws.",
     Food: "Meat from other animals",
     Lifespan: "Around 5 years",
@@ -68,7 +68,7 @@ const animals = {
   },
   Quokka: {
     Name: "Quokka",
-    Image: "../images/quokka.jpg",
+    Image: "./images/quokka.jpg",
     Information: "The Quokka, described as 'a kind of rat as big as a common cat', is native to islands off the coast of Australia.",
     Food: "Plants, including shrubs and grasses",
     Lifespan: "Around 10 years",
@@ -76,7 +76,7 @@ const animals = {
   },
   FrillNeckedLizard: {
     Name: "Frill-necked Lizard",
-    Image: "../images/frill-necked lizard.jpg",
+    Image: "./images/frill-necked lizard.jpg",
     Information: "Known for its dramatic frill display when threatened, the frill-necked lizard is an iconic Australian reptile.",
     Food: "Insects and spiders",
     Lifespan: "Around 20 years",
@@ -84,7 +84,7 @@ const animals = {
   },
   HawksbillTurtle: {
     Name: "Hawksbill Turtle",
-    Image: "../images/hawksbill turtle.jpg",
+    Image: "./images/hawksbill turtle.jpg",
     Information: "The Hawksbill Sea Turtle is known for its distinctive bird-like beak and overlapping scutes on its shell.",
     Food: "Sponges, jellyfish, and sea plants",
     Lifespan: "Around 50 years",
@@ -92,7 +92,7 @@ const animals = {
   },
   Perentie: {
     Name: "Perentie",
-    Image: "../images/perentie.jpg",
+    Image: "./images/perentie.jpg",
     Information: "The perentie is the largest monitor lizard in Australia, renowned for its size and speed.",
     Food: "Smaller insects",
     Lifespan: "Around 20 years",
@@ -100,7 +100,7 @@ const animals = {
   },
   Cassowary: {
     Name: "Cassowary",
-    Image: "../images/cassowary.jpg",
+    Image: "./images/cassowary.jpg",
     Information: "Standing up to six feet tall, cassowaries are large, flightless birds with a dinosaur-like appearance.",
     Food: "Fruits and insects",
     Lifespan: "Around 20 years",
@@ -108,7 +108,7 @@ const animals = {
   },
   Kookaburra: {
     Name: "Kookaburra",
-    Image: "../images/kookaburra.jpg",
+    Image: "./images/kookaburra.jpg",
     Information: "The laughing kookaburra is the largest member of the Kingfisher family, native to Australia's eucalyptus forests.",
     Food: "Insects and small animals",
     Lifespan: "Around 20 years",
@@ -116,7 +116,7 @@ const animals = {
   },
   YellowTailedBlackCockatoo: {
     Name: "Yellow Tailed Black Cockatoo",
-    Image: "../images/yellowtailedblackcockatoo.jpg",
+    Image: "./images/yellowtailedblackcockatoo.jpg",
     Information: "Known for its yellow cheek patches and tail band, this cockatoo is a striking figure in the Australian wilderness.",
     Food: "Fruits, seeds, and plant material",
     Lifespan: "Around 41 years",
@@ -146,11 +146,11 @@ function updateContent(animal) {
   let groupLink = ""; 
   
   if (selectedAnimal.Group === "Mammals") {
-    groupLink = "../html/mammals.html";
+    groupLink = "./html/mammals.html";
   } else if (selectedAnimal.Group === "Reptiles") {
-    groupLink = "../html/reptiles.html";
+    groupLink = "./html/reptiles.html";
   } else if (selectedAnimal.Group === "Birds") {
-    groupLink = "../html/birds.html";
+    groupLink = "./html/birds.html";
   }
   
   

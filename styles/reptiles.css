@@ -1,3 +1,7 @@
+body {
+  background-color: var(--base-color);
+}
+
 .main-content {
   display: flex;
   flex-grow: 1;
@@ -59,4 +63,10 @@
 .message{
   text-align: center;
 }
+
+#main-content.container {
+  box-shadow: 3px 3px 40px forestgreen;
+}
+
+  
 
