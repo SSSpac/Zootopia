@@ -22,33 +22,29 @@ animalLinks.forEach(animal => {
   link.textContent = animal.name;
 
   link.addEventListener("click", () => {
-    document.querySelectorAll('.animal-button').forEach(btn => btn.classList.remove('active'));
-    
-    link.classList.add('active');
+    const isActive = link.classList.contains("active");
 
-    updateContent(animal.dataAnimal);
+    document.querySelectorAll(".animal-button").forEach(btn => btn.classList.remove("active"));
+
+    if (isActive) {
+      displayWelcomeMessage();
+    } else {
+      link.classList.add("active");
+      updateContent(animal.dataAnimal);
+    }
   });
 
   side__bar.appendChild(link);
 });
 
-function updateContent(animal) {
-  const selectedAnimal = animals[animal];
-  if (!selectedAnimal) {
-    console.error("Animal not found in the data!");
-    return;
-  }
-
-  // Update the main content with the animal's details
+function displayWelcomeMessage() {
   contentContainer.innerHTML = `
-    <h2>${selectedAnimal.Name}</h2>
-    <img src="${selectedAnimal.Image}" alt="${selectedAnimal.Name}" style="width:400px;height:auto;">
-    <p>${selectedAnimal.Information}</p>
-    <p><strong>Food:</strong> ${selectedAnimal.Food}</p>
-    <p><strong>Lifespan:</strong> ${selectedAnimal.Lifespan}</p>
+    <p>G'day and welcome to our site showcasing the incredible wildlife of Australia! Prepare to be amazed by the stunning images and information about some of the most unique and diverse creatures on this planet. From odd birds to feisty Tasmanian Devils, we've got it all covered here.</p>
+    <img src="../images/kangaroo.jpg" width="60%" height="auto">
   `;
 }
 
+ 
 const animals = {
   Echidna: {
     Name: "Echidna",
