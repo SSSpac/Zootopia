@@ -39,6 +39,7 @@ body {
 } */
 
 .header {
+    background-color: darkseagreen;;
     text-align: center;
 
 }
@@ -159,8 +160,6 @@ a {
     justify-content: space-between;
     align-items: center;
     background-color: rgb(0, 0, 0);
-    padding: 2rem 4rem;
-
 }
 
 .menu {
@@ -216,11 +215,9 @@ a.animal-button {
 .header__page-title {
     display: flex;
     justify-content: space-evenly;
-    color: #4dd617;
-    font-size: 4rem;
-    margin: 30px;
-
-
+    color: #353535;;
+    font-size: 2rem;
+    padding: 16px;
 }
 
 @media screen and (max-width: 1100px) {
@@ -353,6 +350,7 @@ a,
 a:link,
 a:visited {
     text-decoration: none;
+    background-color: rgb(164, 56, 56);
 }
 
 a:hover {
@@ -468,10 +466,13 @@ footer {
 }
 
 .container {
-    width: auto;
-    margin: auto;
-    display: flex;
-    justify-content: center;
+        border: 1px solid var(--line-color);
+        width: inherit;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        padding: 8px;
+        border-radius: 16px;
 }
 
 .footer-content {
@@ -552,6 +553,7 @@ h3 {
 a {
     text-decoration: none;
     background-color: rgb(164, 56, 56);
+    border-radius: 16px;
 
 }
 
