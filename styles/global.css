@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 /* layout css */
 :root {
     --base-color: #11121a;
@@ -15,7 +16,6 @@
     padding: 0;
 }
 
-
 html {
     font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -23,25 +23,16 @@ html {
 body {
     width: auto;
     margin: 0;
-        overflow-x: hidden;
+    overflow-x: hidden;
     min-height: 100vh;
-    background-color: var(--base-color);
     color: var(--text-color);
+    background-color: var(--base-color)
 }
 
-/* .main-container {
-    max-width: 120rem;
-    margin: 8rem auto;
-    background-color: var(--grey-light-1);
-    box-shadow: var(--shadow-dark);
-    display: flex;
-    flex-direction: column;
-} */
-
 .header {
-    background-color: darkseagreen;;
+    background-color: darkseagreen;
+    ;
     text-align: center;
-
 }
 
 .page-title {
@@ -73,7 +64,6 @@ body {
     font-family: 'Times New Roman', Times, serif;
     display: none;
     max-width: 90%;
-
 }
 
 .popup button {
@@ -91,7 +81,6 @@ body {
     text-align: justify;
     margin: 20px 0;
 }
- 
 
 a {
     display: block;
@@ -100,11 +89,8 @@ a {
     margin: 15px;
     text-align: center;
     text-decoration: none;
-    padding: 5px 0; 
-    
-
+    padding: 5px 0;
 }
-
 
 /* nav css */
 .menu-toggle,
@@ -116,7 +102,6 @@ a {
     position: left;
 }
 
-
 .bar-line {
     display: none;
 }
@@ -125,6 +110,7 @@ a {
     position: absolute;
     right: 15px;
 }
+
 
 .menu li {
     display: flex;
@@ -140,11 +126,6 @@ a {
     margin-top: 46px;
 }
 
-.container {
-    margin-left: 120px;
-    margin-right: 120px;
-}
-
 .top__menu {
     display: flex;
     margin-right: 15px;
@@ -153,7 +134,6 @@ a {
 .nav__bar {
     display: none;
 }
-
 
 .nav {
     display: flex;
@@ -195,9 +175,17 @@ a {
 }
 
 a.animal-button {
-    background-color: #11121a;
-    
-    color: rgb(236, 236, 255);
+    background-color: darkseagreen;
+    color: #353535;
+    padding-left: 40%;
+    padding-right: 70%;
+    text-align: center;
+    border-radius: 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    top: -10px;
+    left: -40px;
 }
 
 .btn:hover {
@@ -215,24 +203,21 @@ a.animal-button {
 .header__page-title {
     display: flex;
     justify-content: space-evenly;
-    color: #353535;;
+    color: #353535;
+    ;
     font-size: 2rem;
     padding: 16px;
 }
 
 @media screen and (max-width: 1100px) {
-
-
     .img1 {
         margin-top: 30px;
     }
-
 
     .main-text h1 {
         font-size: 60px;
         padding-top: 60px;
     }
-
 
     .menu li {
         display: none;
@@ -242,24 +227,14 @@ a.animal-button {
         display: none;
     }
 
-    .nav-logo img {
-        min-width: 100px;
-    }
-
-
-
     .container {
         margin-left: 20px;
         margin-right: 20px;
     }
 
-
-
     .nav__bar {
         display: flex;
     }
-
-
 
     .nav__bar a {
         text-decoration: none;
@@ -368,21 +343,27 @@ main {
     display: block;
 }
 
-
+#side__bar {
+    background-color: rgb(0, 0, 0);
+    border-right: 3px solid darkseagreen;
+    margin-top: 0;
+    padding: 50px;
+}
 
 ul,
 ul li {
     list-style: none;
 }
 
-img {
-    vertical-align: top;
-}
-
 img,
 svg {
-    max-width: 100%;
+    max-width: 80%;
+    vertical-align: top;
+    border-radius: 200px;
+}
 
+img:hover {
+    opacity: 0.4;
 }
 
 address {
@@ -447,13 +428,7 @@ footer {
     font-size: 1rem;
     text-align: left;
     color: var(--secondary-text-color);
-}
-
-footer {
-    padding-bottom: 10px;
-    
     width: 100%;
-    color: white;
 }
 
 .containers {
@@ -461,18 +436,19 @@ footer {
     margin: 50px;
 }
 
-.footer-content h3,h4 {
+.footer-content h3,
+h4 {
     color: white;
 }
 
 .container {
-        border: 1px solid var(--line-color);
-        width: inherit;
-        margin: auto;
-        display: flex;
-        justify-content: center;
-        padding: 8px;
-        border-radius: 16px;
+    border: 1px solid var(--line-color);
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 16px;
 }
 
 .footer-content {
@@ -512,7 +488,7 @@ h3 {
 }
 
 .list li {
-    padding: 5px; 
+    padding: 5px;
     margin: 0 auto;
 }
 
@@ -542,7 +518,7 @@ h3 {
     text-align: center;
     padding: 5px;
     margin: 0 10px;
-    
+
 }
 
 .social-icons i {

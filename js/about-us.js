@@ -19,31 +19,31 @@ const teamData = [
     name: "yevhenii", 
     title: "Yevhenii", 
     description: "A highly skilled developer.", 
-    imgSrc: "./images/about-us/yevhenii.jpg" 
+    imgSrc: "../images/about-us/yevhenii.jpg" 
   },
   { 
     name: "mikael", 
     title: "Mikael", 
     description: "An expert in UI/UX design with years of experience.", 
-    imgSrc: "./images/about-us/mikael.jpg" 
+    imgSrc: "../images/about-us/mikael.jpg" 
   },
   { 
     name: "saifelislam", 
     title: "Saifelislam", 
     description: "Backend specialist and database architect.", 
-    imgSrc: "./images/about-us/saif.jpg" 
+    imgSrc: "../images/about-us/saif.jpg" 
   },
   { 
     name: "andrew", 
     title: "Andrew", 
     description: "A passionate frontend developer and React enthusiast.", 
-    imgSrc: "./images/about-us/andrew.jpg" 
+    imgSrc: "../images/about-us/andrew.jpg" 
   },
   { 
     name: "saba", 
     title: "Saba", 
     description: "DevOps expert ensuring smooth deployment and scaling.", 
-    imgSrc: "./images/about-us/saba.jpg" 
+    imgSrc: "../images/about-us/saba.jpg" 
   },
 ];
 
