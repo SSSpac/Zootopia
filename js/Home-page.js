@@ -149,8 +149,6 @@ function updateContent(animal) {
     groupLink = "./html/birds.html";
   }
   
-  
-
   contentContainer.innerHTML = `
     <h2>${selectedAnimal.Name}</h2>
     <img src="${selectedAnimal.Image}" alt="${selectedAnimal.Name}" style="width:400px;height:auto;">
@@ -161,3 +159,4 @@ function updateContent(animal) {
       Group: ${selectedAnimal.Group}
     </a>
   `; }
+  
