@@ -40,7 +40,7 @@ animalLinks.forEach(animal => {
 function displayWelcomeMessage() {
   contentContainer.innerHTML = `
     <p>G'day and welcome to our site showcasing the incredible wildlife of Australia! Prepare to be amazed by the stunning images and information about some of the most unique and diverse creatures on this planet. From odd birds to feisty Tasmanian Devils, we've got it all covered here.</p>
-    <img src="../images/kangaroo.jpg" width="60%" height="auto">
+    <img src="./images/kangaroo.jpg" width="60%" height="auto">
   `;
 }
 

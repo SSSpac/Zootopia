@@ -84,11 +84,19 @@ body {
 }
 
 .word {
-  color: rgb(46, 231, 87);
+  background-color: darkseagreen;
+  color: #353535;
+  padding-left: 50px;
+  padding-right: 50px;
   text-align: center;
-  margin-left: 18px;
-  border-radius: 2px;
+  border-radius: 16px;
+  font-size: 1.5rem;
+  position: relative;
+  top: -30px;
+  left: -15px;
 }
+
+
 
 .animal-button {
   display: block;
@@ -103,8 +111,8 @@ body {
 }
 
 .animal-button.active {
-  background-color: #007bff;
-  color: white;
+  background-color: white;
+  color: green;
   border: solid #0056b3;
   font-weight: bold;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -124,7 +132,7 @@ body {
   display: grid;
   grid-template-rows: 0fr;
   transition: 300ms ease-in-out;
-
+  
   >div {
     overflow: hidden;
   }
@@ -200,13 +208,30 @@ p {
   padding: 16px;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:960px) {
   body {
-    grid-template-columns: 1fr;
+   display: grid;
+   margin: 0;
   }
 
   main {
-    padding: 2em 1em 60px 1em;
+    padding: 16px;
+      box-shadow: 3px 3px 40px forestgreen;
+      border-radius: 16px;
+  }
+
+  .content {
+    padding: 40px;
+  }
+
+  .myVideo {
+    display: none;
+   }
+}
+
+@media screen and (max-width:768px) {
+  body {
+    grid-template-columns: 1fr;
   }
 
   .container {

@@ -22,7 +22,7 @@ body {
     color: var(--text-color);
 }
 
-.logo {
+.nav-logo {
     width: 80px;
     height: auto;
     left: 0;
@@ -83,6 +83,11 @@ main {
     color: #b0b3c1;
     text-align: center;
 }
+img {
+max-width: 80%;
+    vertical-align: top;
+    border-radius: 200px;
+}
 
 .read-more {
     border-radius: 16px;
@@ -124,7 +129,6 @@ footer {
 }
 
 .list a.active {
-    background-color: var(--line-color);
     color: #e6e6ef;
     padding: 8px;
     border-radius: 8px;

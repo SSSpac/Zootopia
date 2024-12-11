@@ -1,6 +1,5 @@
 .team-content-con {
     padding: 50px 32px; 
-    background: linear-gradient(180deg, rgb(243, 243, 243) 0%, rgb(170, 170, 170) 100%);
 }
 
 .team-content-con > h2 {
@@ -13,10 +12,12 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap; 
-    margin-top: 50px;
     padding: 50px 0px 50px 0px;
-    background-color: rgb(235, 235, 235);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+img {
+    background-color: green;
+    max-width: 100%;
 }
 
 
@@ -32,15 +33,13 @@
     width: 250px;
 }
 
-
-
 .picture {
     width: 250px;
     box-shadow: 0 0px 16px rgba(0, 0, 0, 0.5);
 }
 
 .team-name {
-    background-color: white;
+    background-color: darkseagreen;
     padding: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
@@ -55,6 +54,14 @@
     width: 100%;
     height: auto;
     cursor: pointer;
+    border-radius: 0;
+}
+
+p { 
+    background: none; 
+    color: #353535;
+    border-radius: 10px;
+    text-align: center;
 }
 
 .about-us__sidebar {

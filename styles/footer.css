@@ -21,8 +21,7 @@ footer p {
     padding: 8px;
     border-radius: 16px;
 }
-
-.footer-content {
+.footer-content{
     width: auto;
 }
 
@@ -42,7 +41,7 @@ h3 {
     color: var(--text-color);
 }
 
-.info p {
+.info  p{
     color: white;
     font-size: 1rem;
 }
@@ -51,9 +50,8 @@ h3 {
     text-align: center;
     padding: 0;
 }
-
 .list a {
-    font-size: 1rem;
+    font-size:1rem;
     color: white;
 }
 
@@ -61,35 +59,31 @@ h3 {
     padding: 5px;
     margin: 0 210px;
 }
-
 .list i {
     color: white;
 }
 
 .contact-us p {
-    margin-bottom: 10px;
-    text-align: left;
-    line-height: 1.5;
-    display: inline-block;
+    margin-bottom: 10px; 
+    text-align: left;    
+    line-height: 1.5; 
+    display: inline-block;   
 }
 
-.list li:hover::before {
+.list li:hover::before{
     width: 70px;
 }
-
 .social-icons {
     text-align: center;
     padding: 0;
 
 }
-
 .social-icons li {
     display: inline-block;
     text-align: center;
     padding: 5px;
     margin: 0 10px;
 }
-
 .social-icons i {
     color: white;
     font-size: 1rem;
@@ -98,15 +92,12 @@ h3 {
 a {
     text-decoration: none;
 }
-
 a:hover {
     color: white;
 }
-
 .social-icons i:hover {
     color: rgb(173, 173, 53);
 }
-
 .bottom-bar {
     background-color: darkseagreen;
     text-align: center;
@@ -123,22 +114,22 @@ a:hover {
 
 @media (max-width: 768px) {
     .container {
-        flex-direction: column;
+        flex-direction: column; 
         align-items: center;
     }
 
     .footer-content {
-        flex: 1 1 auto;
+        flex: 1 1 auto; 
         max-width: 100%;
     }
 
     .list li {
-        margin: 0 auto;
+        margin: 0 auto; 
         padding: 5px;
     }
 
     .social-icons i {
-        font-size: 20px;
+        font-size: 20px; 
     }
 }
 
