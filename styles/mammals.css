@@ -83,8 +83,9 @@ main {
     color: #b0b3c1;
     text-align: center;
 }
+
 img {
-max-width: 80%;
+    max-width: 80%;
     vertical-align: top;
     border-radius: 200px;
 }
@@ -136,11 +137,14 @@ footer {
     text-underline-offset: 5px;
     font-size: 18px;
 }
+
 .list a.active:hover {
     color: #008000;
 }
 
-a, a:link, a:visited  {
+a,
+a:link,
+a:visited {
     text-decoration: none;
     background-color: rgb(164, 56, 56);
     padding-left: 16px;
