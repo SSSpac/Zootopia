@@ -3,7 +3,6 @@
 /* layout css */
 :root {
     --base-color: #11121a;
-    --line-color: #42434a;
     --hover-color: #222533;
     --text-color: #e6e6ef;
     --accent-color: #5e63ff;
@@ -345,7 +344,6 @@ main {
 
 #side__bar {
     background-color: rgb(0, 0, 0);
-    border-right: 3px solid darkseagreen;
     margin-top: 0;
     padding: 50px;
 }
@@ -442,13 +440,11 @@ h4 {
 }
 
 .container {
-    border: 1px solid var(--line-color);
     width: 100%;
     margin: auto;
     display: flex;
     justify-content: center;
     padding: 8px;
-    border-radius: 16px;
 }
 
 .footer-content {
