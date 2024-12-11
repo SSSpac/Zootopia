@@ -48,6 +48,25 @@ let yellowTailedBlackCockatoo = new Animals(
 
 let animals = [cassowary, kookaburra, yellowTailedBlackCockatoo];
 
+const getAllAnimals = () => {
+  const animalNamesContainer = document.querySelector(".animal_names");
+  
+  animals.forEach(animal => {
+    const listItem = document.createElement('li');
+    const button = document.createElement('button');
+    button.classList.add('animal-button');
+    button.textContent = animal.name;
+    button.setAttribute('data-animal', animal.name);
+    
+    button.addEventListener('click', () => {
+      displaySpecificBirdInfo(animal.name);
+    });
+    
+    listItem.appendChild(button);
+    animalNamesContainer.appendChild(listItem);
+  });
+};
+
 function displaySpecificBirdInfo(birdName) {
   const container = document.getElementById('main-content');
   container.innerHTML = '';
@@ -55,24 +74,24 @@ function displaySpecificBirdInfo(birdName) {
   const bird = animals.find(animal => animal.name === birdName);
 
   if (bird) {
-      const animalInfo = document.createElement('div');
-      animalInfo.classList.add('animal-info');
-      animalInfo.innerHTML = `
-          <h3>${bird.name}</h3>
-          <img src="${bird.image}" alt="${bird.name}" class="animal-image">
-          <p><strong>Lifespan:</strong> ${bird.lifespan} years</p>
-          <p><strong>Group:</strong> ${bird.group}</p>
-          <p><strong>Food:</strong> ${bird.food}</p>
-          <p><strong>Description:</strong>
-              <span id="dots">${bird.description.substring(0, 200)}...</span>
-              <span id="more" style="display:none;">${bird.description}</span>
-          </p>
-          <button class="read-more" onclick="myFunction(this)">Read more</button>
-          <p><strong>Length:</strong> ${bird.length} meters</p>
-          <p><strong>Weight:</strong> ${bird.weight} kg</p>
-          <p><strong>Found in:</strong> ${bird.found}</p>
-      `;
-      container.appendChild(animalInfo);
+    const animalInfo = document.createElement('div');
+    animalInfo.classList.add('animal-info');
+    animalInfo.innerHTML = `
+      <h3>${bird.name}</h3>
+      <img src="${bird.image}" alt="${bird.name}" class="animal-image">
+      <p><strong>Lifespan:</strong> ${bird.lifespan} years</p>
+      <p><strong>Group:</strong> ${bird.group}</p>
+      <p><strong>Food:</strong> ${bird.food}</p>
+      <p><strong>Description:</strong>
+        <span id="dots">${bird.description.substring(0, 200)}...</span>
+        <span id="more" style="display:none;">${bird.description}</span>
+      </p>
+      <button class="read-more" onclick="myFunction(this)">Read more</button>
+      <p><strong>Length:</strong> ${bird.length} meters</p>
+      <p><strong>Weight:</strong> ${bird.weight} kg</p>
+      <p><strong>Found in:</strong> ${bird.found}</p>
+    `;
+    container.appendChild(animalInfo);
   }
 }
 
@@ -82,57 +101,16 @@ function myFunction(button) {
   const moreText = animalInfo.querySelector('#more');
 
   if (dots.style.display === "none") {
-      dots.style.display = "inline";
-      button.innerHTML = "Read more";
-      moreText.style.display = "none";
+    dots.style.display = "inline";
+    button.innerHTML = "Read more";
+    moreText.style.display = "none";
   } else {
-      dots.style.display = "none";
-      button.innerHTML = "Read less";
-      moreText.style.display = "inline";
+    dots.style.display = "none";
+    button.innerHTML = "Read less";
+    moreText.style.display = "inline";
   }
 }
 
-const onClick = {
-  birdsClicked: false,
-};
-
-const showBirdsWelcomeMessage = () => {
-  const welcomeMessageContainer = document.getElementById("home-message");
-
-  if (!onClick.birdsClicked) {
-    welcomeMessageContainer.innerHTML = `
-      <h2>Hi and Welcome to the Birds page!</h2>
-      <p>We have three different birds here at the Zoo. To find more information about them, click on the button on the left side in the sidebar to find out more!</p>
-    `;
-    onClick.birdsClicked = true;
-  } else {
-    welcomeMessageContainer.innerHTML = "";
-  }
-};
-
-const menuLinks = document.querySelectorAll('.menu-item');
-menuLinks.forEach(link => {
-  link.addEventListener('click', function (event) {
-    menuLinks.forEach(item => {
-      item.classList.remove('active');
-    });
-
-    event.target.classList.add('active');
-    
-    if (event.target.textContent === "Birds") {
-      showBirdsWelcomeMessage();
-    }
-  });
-});
-
-const sidebarButtons = document.querySelectorAll('.animal-button');
-sidebarButtons.forEach(button => {
-  button.addEventListener('click', (event) => {
-    const birdName = event.target.getAttribute('data-animal');
-    displaySpecificBirdInfo(birdName);
-
-    menuLinks.forEach(item => {
-      item.classList.remove('active');
-    });
-  });
+document.addEventListener('DOMContentLoaded', () => {
+  getAllAnimals();
 });
