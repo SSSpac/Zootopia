@@ -41,7 +41,18 @@ body {
     justify-content: space-evenly;
     color: #353535;
     font-size: 2rem;
+    padding: 16px;
     margin: 0;
+}
+
+a {
+    display: block;
+    width: 100px;
+    position: relative;
+    margin: 15px;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 0;
 }
 
 .sidebar {
@@ -62,7 +73,7 @@ body {
 
 .btn {
     position: relative;
-    left: 190px;
+    left: 100px;
 }
 
 .main-content {
@@ -118,7 +129,7 @@ footer {
 }
 
 .btn-footer {
-    display: inline;
+    display: flex;
     position: relative;
     left: 215px;
     padding: 16px;
@@ -147,8 +158,6 @@ a:link,
 a:visited {
     text-decoration: none;
     background-color: rgb(164, 56, 56);
-    padding-left: 16px;
-    padding-right: 16px;
     border-radius: 16px;
 }
 
