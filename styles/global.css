@@ -40,7 +40,6 @@ body {
 
 .content {
     display: flex;
-    flex-direction: row;
 }
 
 /* reset layout */
@@ -343,7 +342,6 @@ main {
 }
 
 #side__bar {
-    background-color: rgb(0, 0, 0);
     margin-top: 0;
     padding: 50px;
 }
