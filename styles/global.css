@@ -353,7 +353,8 @@ ul li {
 
 img,
 svg {
-    max-width: 80%;
+    max-width: 100%;
+    height: auto;
     vertical-align: top;
     border-radius: 200px;
 }
@@ -443,6 +444,8 @@ h4 {
     display: flex;
     justify-content: center;
     padding: 8px;
+    box-sizing: border-box;
+    overflow-x:hidden ;
 }
 
 .footer-content {
