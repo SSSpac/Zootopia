@@ -48,7 +48,8 @@ main {
 .content {
   display: flex;
   flex-direction: row;
-  margin: 40px;
+  margin: 40px ;
+  
 }
 
 .sidebar {
@@ -183,7 +184,7 @@ main {
 
 main {
   padding: 16px;
-  width: 90%;
+  width: 100%;
 }
 
 h2 {
@@ -197,7 +198,10 @@ h2 {
   flex-direction: column;
   align-items: center;
   gap: 22px;
-  padding: 20px;
+  padding: 16px;
+  max-width: 100%; 
+  margin: 0 ;
+
 }
 
 
@@ -222,6 +226,7 @@ p {
 
   main {
     padding: 16px;
+    width: 100%;
     border-radius: 16px;
   }
 
@@ -255,7 +260,10 @@ p {
 
   .container {
     border: none;
-    padding: 0;
+    padding: 16px;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
   }
 
   .sidebar {
