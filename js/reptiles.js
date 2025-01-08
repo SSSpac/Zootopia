@@ -82,7 +82,7 @@ function Animal(image, name, group, lifespan, weight, food, length, found, descr
   
   getAllAnimals();
   //add click event listner to listed object
-  const items = document.querySelectorAll('li');
+  const items = document.querySelectorAll('.animal_names li');
   items.forEach(item => {
     item.addEventListener('click', (e) => {
       showAnimal(e.target.textContent);
