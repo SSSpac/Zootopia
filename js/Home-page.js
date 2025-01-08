@@ -104,7 +104,7 @@ const animals = {
   },
   Kookaburra: {
     Name: "Kookaburra",
-    Image: "./images/kooKaburra.jpg",
+    Image: "./images/Kookaburra.jpg",
     Information: "The laughing kookaburra is the largest member of the Kingfisher family, native to Australia's eucalyptus forests.",
     Food: "Insects and small animals",
     Lifespan: "Around 20 years",
