@@ -40,7 +40,6 @@ body {
 
 .content {
     display: flex;
-    flex-direction: row;
 }
 
 /* reset layout */
@@ -343,7 +342,6 @@ main {
 }
 
 #side__bar {
-    background-color: rgb(0, 0, 0);
     margin-top: 0;
     padding: 50px;
 }
@@ -355,7 +353,8 @@ ul li {
 
 img,
 svg {
-    max-width: 80%;
+    max-width: 100%;
+    height: auto;
     vertical-align: top;
     border-radius: 200px;
 }
@@ -445,6 +444,8 @@ h4 {
     display: flex;
     justify-content: center;
     padding: 8px;
+    box-sizing: border-box;
+    overflow-x:hidden ;
 }
 
 .footer-content {
