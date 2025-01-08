@@ -308,7 +308,7 @@ p {
 
     ul li .sub-menu.show {
       position: fixed;
-      bottom: 60px;
+      bottom: 59px;
       left: 0;
       box-sizing: border-box;
       height: 60px;
