@@ -65,7 +65,7 @@ const showAnimal = (animal_position) => {   //function
 
 getAllAnimals();
 
-const items = document.querySelectorAll("li");
+const items = document.querySelectorAll(".animal_names li");
 items.forEach(item => {
   item.addEventListener("click", (event) => {
     showAnimal(event.target.textContent);
