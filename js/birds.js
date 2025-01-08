@@ -31,7 +31,7 @@ let kookaburra = new Animals(
   0.43,
   0.3,
   "Australia wide",
-  "../images/Kookaburra.Jpg"
+  "./images/Kookaburra.Jpg"
 );
 
 let yellowTailedBlackCockatoo = new Animals(
