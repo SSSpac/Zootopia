@@ -1,8 +1,8 @@
 .team-content-con {
-    padding: 50px 32px; 
+    padding: 50px 32px;
 }
 
-.team-content-con > h2 {
+.team-content-con>h2 {
     text-align: center;
     font-size: 3rem;
     padding-top: 2rem;
@@ -11,19 +11,29 @@
 .team-content {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     padding: 50px 0px 50px 0px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 img {
     background-color: green;
     max-width: 100%;
 }
 
+.header__page-title {
+    display: flex;
+    justify-content: space-evenly;
+    color: #353535;
+    font-size: 2rem;
+    padding: 16px;
+    margin: 0;
+    background-color: darkseagreen;
+}
 
 .teamsDescription {
     display: block;
-    position: relative; 
+    position: relative;
     width: 100%;
     color: black;
     background-color: white;
@@ -57,8 +67,8 @@ img {
     border-radius: 0;
 }
 
-p { 
-    background: none; 
+p {
+    background: none;
     color: #353535;
     border-radius: 10px;
     text-align: center;
@@ -103,7 +113,7 @@ p {
 }
 
 .about-us__sidebar.hidden {
-    transform: translateX(-100%); 
+    transform: translateX(-100%);
 }
 
 .sidebar-hiden2 {
@@ -113,7 +123,7 @@ p {
 .about-us__toggle-btn {
     position: fixed;
     top: 20vh;
-    left: 270px; 
+    left: 270px;
     width: 40px;
     height: 40px;
     background-color: #333;
@@ -130,7 +140,7 @@ p {
     background-color: #555;
 }
 
-.about-us__sidebar.hidden ~ .about-us__toggle-btn {
+.about-us__sidebar.hidden~.about-us__toggle-btn {
     left: 10px;
 }
 
@@ -140,7 +150,7 @@ p {
 
 @media screen and (max-width: 1100px) {
     .team-content-con {
-        padding: 30px 32px; 
+        padding: 30px 32px;
     }
 
     .team-content {
@@ -170,9 +180,7 @@ p {
     }
 }
 
-@media screen and (max-height: 560px) {
-    
-}
+@media screen and (max-height: 560px) {}
 
 @media screen and (max-width: 420px) {
     .picture {
